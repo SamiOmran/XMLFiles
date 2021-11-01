@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<device id="5">
+    <name>D5</name>
+    <id>5</id>
+
+    <group>
+        <parent>
+            <id></id>
+            <group></group>
+        </parent>
+    </group>
+
+    <features>
+        <feature>f4</feature>
+        <feature>f5</feature>
+    </features>
+
+</device>
