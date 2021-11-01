@@ -1,14 +1,11 @@
 <?xml version="1.0"?>
-<device id="5">
+<device>
     <name>D5</name>
     <id>5</id>
 
-    <group>
-        <parent>
-            <id></id>
-            <group></group>
-        </parent>
-    </group>
+    <parent>
+        <id></id>
+    </parent>
 
     <features>
         <feature>f4</feature>
