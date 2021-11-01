@@ -1,6 +1,5 @@
 package com.exalt.xmlfiles;
 
-import com.exalt.xmlfiles.model.Device;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
