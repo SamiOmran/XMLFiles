@@ -1,6 +1,6 @@
 <device>
-    <name>D3</name>
-    <id>3</id>
+    <name>D10</name>
+    <id>10</id>
 
     <parent>
         <name>D1</name>
@@ -8,7 +8,8 @@
     </parent>
 
     <features>
-        <feature>f92</feature>
+        <feature>TEST1</feature>
+        <feature>Qasem</feature>
     </features>
 
 </device>
