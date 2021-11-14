@@ -1,14 +1,18 @@
 package com.exalt.xmlfiles;
 
 import org.springframework.stereotype.Service;
-
-import java.util.List;
+import static com.exalt.xmlfiles.Bootstrap.allDevices;
 
 @Service
 public class TheService {
-    private DeviceRepository deviceRepository;
 
-    public List<Device> getDeviceFeatures(long id) {
-        return null;
+    public JsonObject getDeviceFeatures(String id) {
+        for (Device tempDevice : allDevices) {
+            if (tempDevice.getId().equals(id)) {
+                return new JsonObject("Success", tempDevice);
+            }
+        }
+
+        return new JsonObject("Fail", null);
     }
 }
