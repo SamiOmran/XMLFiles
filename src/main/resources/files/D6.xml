@@ -1,0 +1,14 @@
+<device>
+    <name>D6</name>
+    <id>6</id>
+
+    <parent>
+        <name></name>
+        <id></id>
+    </parent>
+
+    <features>
+        <feature>f33</feature>
+    </features>
+
+</device>
