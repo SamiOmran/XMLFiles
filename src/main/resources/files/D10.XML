@@ -8,8 +8,8 @@
     </parent>
 
     <features>
-        <feature>TEST1</feature>
-        <feature>Qasem</feature>
+        <feature>feature9</feature>
+        <feature>feature10</feature>
     </features>
 
 </device>
