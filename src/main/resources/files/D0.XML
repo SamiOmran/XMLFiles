@@ -1,6 +1,6 @@
 <device>
-    <name>D10</name>
-    <id>10</id>
+    <name>D0</name>
+    <id>0</id>
 
     <parent>
         <name>D3</name>
