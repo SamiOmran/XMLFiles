@@ -1,25 +1,25 @@
 package com.exalt.xmlfiles;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.w3c.dom.Document;
-import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import javax.print.Doc;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.stream.Collectors;
 
 @Configuration
 public class Bootstrap {
     private static File[] allFiles;
     static final ArrayList<Device> allDevices = new ArrayList<>();
+    static final Logger logger = LoggerFactory.getLogger(Bootstrap.class);
 
     /**
      * constructor initializing required fields and read the directory
@@ -98,14 +98,24 @@ public class Bootstrap {
 //                deviceFeatures.addAll(getParentFeatures(document, parentNodeList, deviceFeatures));
 //            }
                 // remove duplicates, then convert it to arrayList
-            newDevice = new Device(id, name, parentAsStr, deviceFeatures, document);
+            newDevice = new Device(id, name, parentAsStr, deviceFeatures);
             allDevices.add(newDevice);
 
             } catch (Exception exception) {
                 exception.printStackTrace();
             }
         }
-        for (Device dev: allDevices) {
+
+        for (Device dev : allDevices) {
+            if (!dev.getParentName().equals(""))
+                for (Device parent : allDevices) {
+                    if (parent.getName().equals(dev.getParentName())) {
+                        dev.setDeviceParent(parent);
+                    }
+                }
+        }
+
+        for (Device dev : allDevices) {
             ArrayList<String> temp = getParentFeatures(dev);
             dev.setFeatures(temp);
         }
@@ -118,35 +128,35 @@ public class Bootstrap {
      * @param childFeatures the child features list
      * @throws Exception .
      */
-//    private ArrayList<String> getParentFeatures(Node root, NodeList parentAsTag, ArrayList<String> childFeatures) throws Exception {
-//        String parentAsStr = getParentName(parentAsTag);
-//        final String EXTENSION = ".xml";
-//        String fileName = parentAsStr + EXTENSION;
-//        File parentFile = null;
-//        Document document;
-//        NodeList tempList;
-//        Element device;
-//
-//        if (!parentAsStr.equals("")) {
-//            for (File file : allFiles) {
-//                if (file.getName().equals(fileName)) {
-//                    parentFile = file;
-//                    break;
-//                }
-//            }
-//            document = declareNeededObjects(parentFile);
-//            device = (Element) document.getElementsByTagName("device").item(0);
-//
-//            parentAsTag = device.getElementsByTagName("parent");
-//
-//            childFeatures.addAll(getParentFeatures(device, parentAsTag, childFeatures));
-//        } else {
-//            tempList = getFeaturesList(root);
-//            childFeatures.addAll(getFeaturesFromNodeList(tempList));
-//        }
-//
-//        return childFeatures;
-//    }
+    /*private ArrayList<String> getParentFeatures(Node root, NodeList parentAsTag, ArrayList<String> childFeatures) throws Exception {
+        String parentAsStr = getParentName(parentAsTag);
+        final String EXTENSION = ".xml";
+        String fileName = parentAsStr + EXTENSION;
+        File parentFile = null;
+        Document document;
+        NodeList tempList;
+        Element device;
+
+        if (!parentAsStr.equals("")) {
+            for (File file : allFiles) {
+                if (file.getName().equals(fileName)) {
+                    parentFile = file;
+                    break;
+                }
+            }
+            document = declareNeededObjects(parentFile);
+            device = (Element) document.getElementsByTagName("device").item(0);
+
+            parentAsTag = device.getElementsByTagName("parent");
+
+            childFeatures.addAll(getParentFeatures(device, parentAsTag, childFeatures));
+        } else {
+            tempList = getFeaturesList(root);
+            childFeatures.addAll(getFeaturesFromNodeList(tempList));
+        }
+
+        return childFeatures;
+    }*/
 
     /**
      *  transfer the features from the NodeList (<features></features>) to ArrayList
@@ -166,7 +176,7 @@ public class Bootstrap {
 
     /**
      * get features tag
-     * @param root the whole node
+     * //@param root the whole node
      * @return features list <features></features>
      */
 //    private NodeList getFeaturesList(Node root) {
@@ -181,18 +191,19 @@ public class Bootstrap {
 //        return list;
 //    }
 
-    private ArrayList<String> getParentFeatures(Device device) {
+    private ArrayList<String> getParentFeatures(Device leaf) {
         ArrayList<String> features;
-        features = device.getFeatures();
+        features = leaf.getFeatures();
+        Device temp = new Device();
 
-        if (device.getParent() != "") {
-            Device temp = new Device();
-            for (Device dev : allDevices) {
-                if (dev.getName().equals(device.getParent())) {
-                    temp = dev;
+        if (leaf.getDeviceParent() != null) {
+            for (Device parent : allDevices) {
+                if (parent == leaf.getDeviceParent()) {
+                    temp = parent;
+                    break;
                 }
             }
-            ArrayList<String> parentFeatures = new ArrayList<>(getParentFeatures(temp));
+            ArrayList<String> parentFeatures = getParentFeatures(temp);
             features.addAll(parentFeatures);
         }
         return features;
