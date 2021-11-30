@@ -22,7 +22,6 @@ public class Bootstrap {
     public static final ArrayList<Device> allDevices = new ArrayList<>();
     private static final List<File> allFiles = new ArrayList<>();
     private static final Logger logger = LoggerFactory.getLogger(Bootstrap.class);
-    private static File[] allDirectories;
 
     /**
      * constructor initializing required fields
@@ -37,8 +36,7 @@ public class Bootstrap {
         } else {
             rootFolder =  new File(resource.toURI());
         }
-        allDirectories = rootFolder.listFiles();
-        readDirectory(allDirectories);
+        extractFiles(rootFolder.listFiles());
     }
 
     /**
@@ -46,13 +44,13 @@ public class Bootstrap {
      * inside all sub directories
      * @param folder directory with nested sub directory or files
      */
-    public void readDirectory(File[] folder) {
+    public void extractFiles(File[] folder) {
         for (File temp : folder) {
             if (temp.isFile()) {
                 allFiles.add(temp);
             }
             else if (temp.isDirectory()) {
-                readDirectory(temp.listFiles());
+                extractFiles(temp.listFiles());
             }
         }
     }
