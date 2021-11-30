@@ -1,5 +1,6 @@
 package com.exalt.xmlfiles;
 
+import com.exalt.xmlfiles.model.Device;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Bean;
@@ -14,27 +15,46 @@ import java.io.File;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.List;
 
 @Configuration
 public class Bootstrap {
-    private static File[] allFiles;
-    static final ArrayList<Device> allDevices = new ArrayList<>();
-    static final Logger logger = LoggerFactory.getLogger(Bootstrap.class);
+    public static final ArrayList<Device> allDevices = new ArrayList<>();
+    private static final List<File> allFiles = new ArrayList<>();
+    private static final Logger logger = LoggerFactory.getLogger(Bootstrap.class);
+    private static File[] allDirectories;
 
     /**
-     * constructor initializing required fields and read the directory
+     * constructor initializing required fields
      * @throws URISyntaxException exception if error happened during reading path
      */
     public Bootstrap() throws URISyntaxException {
-        URL resource = getClass().getClassLoader().getResource("files");
-        final File directory;
+        URL resource = getClass().getClassLoader().getResource("devices profiles");
+        File rootFolder;
 
         if (resource == null) {
-            throw new IllegalArgumentException("file not found!");
+            throw new IllegalArgumentException("Directory not found!");
         } else {
-            directory =  new File(resource.toURI());
+            rootFolder =  new File(resource.toURI());
         }
-        allFiles = directory.listFiles();
+        allDirectories = rootFolder.listFiles();
+        readDirectory(allDirectories);
+    }
+
+    /**
+     * read main directory, and store all files
+     * inside all sub directories
+     * @param folder directory with nested sub directory or files
+     */
+    public void readDirectory(File[] folder) {
+        for (File temp : folder) {
+            if (temp.isFile()) {
+                allFiles.add(temp);
+            }
+            else if (temp.isDirectory()) {
+                readDirectory(temp.listFiles());
+            }
+        }
     }
 
     /**
@@ -97,7 +117,6 @@ public class Bootstrap {
 //            if (!parentAsStr.equals("")) {
 //                deviceFeatures.addAll(getParentFeatures(document, parentNodeList, deviceFeatures));
 //            }
-                // remove duplicates, then convert it to arrayList
             newDevice = new Device(id, name, parentAsStr, deviceFeatures);
             allDevices.add(newDevice);
 
@@ -105,7 +124,11 @@ public class Bootstrap {
                 exception.printStackTrace();
             }
         }
+    }
 
+    // set deviceParent reference
+    @Bean
+    public void setParent() {
         for (Device dev : allDevices) {
             if (!dev.getParentName().equals(""))
                 for (Device parent : allDevices) {
@@ -114,12 +137,15 @@ public class Bootstrap {
                     }
                 }
         }
+    }
 
+    // Inherit parent's features
+    @Bean
+    public void inheritParentFeatures() {
         for (Device dev : allDevices) {
             ArrayList<String> temp = getParentFeatures(dev);
             dev.setFeatures(temp);
         }
-
     }
 
     /**
@@ -198,6 +224,7 @@ public class Bootstrap {
 
         if (leaf.getDeviceParent() != null) {
             for (Device parent : allDevices) {
+                temp = new Device();
                 if (parent == leaf.getDeviceParent()) {
                     temp = parent;
                     break;
@@ -208,6 +235,7 @@ public class Bootstrap {
         }
         return features;
     }
+
 }
 
 
