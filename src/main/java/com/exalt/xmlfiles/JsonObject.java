@@ -1,5 +1,6 @@
 package com.exalt.xmlfiles;
 
+import com.exalt.xmlfiles.model.Device;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
