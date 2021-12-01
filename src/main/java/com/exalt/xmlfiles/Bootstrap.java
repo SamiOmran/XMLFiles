@@ -1,7 +1,5 @@
 package com.exalt.xmlfiles;
 
-import com.exalt.xmlfiles.model.Device;
-import javafx.util.Pair;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Bean;
@@ -41,15 +39,16 @@ public class Bootstrap {
     }
 
     /**
-     *      read main directory, and store all files
-     *             inside all sub directories
+     * read main directory, and store all files
+     * inside all sub directories
      * @param folder directory with nested sub directory or files
      */
     public void extractFiles(File[] folder) {
         for (File temp : folder) {
             if (temp.isFile()) {
                 allFiles.add(temp);
-            } else if (temp.isDirectory()) {
+            }
+            else if (temp.isDirectory()) {
                 extractFiles(temp.listFiles());
             }
         }
@@ -97,7 +96,7 @@ public class Bootstrap {
         NodeList parentNodeList, tempList;
         Document document;
         Device newDevice;
-        ArrayList<Pair<String, Boolean>> deviceFeatures;
+        ArrayList<String> deviceFeatures;
 
         for (File file : allFiles ) {
             try {
@@ -137,13 +136,11 @@ public class Bootstrap {
         }
     }
 
-    /**
-     *  loop over devices stored, and get the parent feature's
-     */
+    // Inherit parent's features
     @Bean
     public void inheritParentFeatures() {
         for (Device dev : allDevices) {
-            ArrayList<Pair<String, Boolean>>  temp = getParentFeatures(dev);
+            ArrayList<String> temp = getParentFeatures(dev);
             dev.setFeatures(temp);
         }
     }
@@ -185,30 +182,17 @@ public class Bootstrap {
     }*/
 
     /**
-     * factory method, for creating new Pair
-     */
-    private Pair<String, Boolean> createPair(String feature, Boolean exclude) {
-        return new Pair<>(feature, exclude);
-    }
-
-    /**
      *  transfer the features from the NodeList (<features></features>) to ArrayList
      * @param nodeList = (<features></features>) list of features in form NodeList
      * @return arrayList of transferred features
      */
-    private ArrayList<Pair<String, Boolean>> getFeaturesFromNodeList(NodeList nodeList) {
-        ArrayList<Pair<String, Boolean>> features = new ArrayList<>();
+    private ArrayList<String> getFeaturesFromNodeList(NodeList nodeList) {
+        ArrayList<String> features = new ArrayList<>();
 
         for (int i = 0; i < nodeList.getLength(); i++) {
             Node node = nodeList.item(i);
-            if (node.getNodeName().equalsIgnoreCase("exclude")) {
-                String feature = node.getChildNodes().item(1).getTextContent();
-                logger.info("what is it ? " + feature);
-                features.add(createPair(feature,true));
-            }
-            else {
-                features.add(createPair(node.getTextContent(), false));
-            }
+            if (node.getNodeName().equalsIgnoreCase("feature"))
+                features.add(node.getTextContent());
         }
         return features;
     }
@@ -230,13 +214,8 @@ public class Bootstrap {
 //        return list;
 //    }
 
-    /**
-     * another way to get parent's features
-     * @param leaf child device
-     * @return arrayList of paris of all features
-     */
-    private ArrayList<Pair<String, Boolean>> getParentFeatures(Device leaf) {
-        ArrayList<Pair<String, Boolean>> features;
+    private ArrayList<String> getParentFeatures(Device leaf) {
+        ArrayList<String> features;
         features = leaf.getFeatures();
         Device temp = new Device();
 
@@ -248,17 +227,8 @@ public class Bootstrap {
                     break;
                 }
             }
-            ArrayList<Pair<String, Boolean>>  parentFeatures = getParentFeatures(temp);
+            ArrayList<String> parentFeatures = getParentFeatures(temp);
             features.addAll(parentFeatures);
-        }
-        return excludeFeatures(features);
-    }
-
-    private ArrayList<Pair<String, Boolean>> excludeFeatures(ArrayList<Pair<String, Boolean>> features) {
-        for (int i = 0; i < features.size(); i++) {
-            if (features.get(i).getValue()) {
-                features.remove(i);
-            }
         }
         return features;
     }

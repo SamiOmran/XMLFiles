@@ -1,6 +1,5 @@
 package com.exalt.xmlfiles;
 
-import com.exalt.xmlfiles.model.Device;
 import org.springframework.stereotype.Service;
 import static com.exalt.xmlfiles.Bootstrap.allDevices;
 
