@@ -1,4 +1,4 @@
-package com.exalt.xmlfiles;
+package com.exalt.xmlfiles.model;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
