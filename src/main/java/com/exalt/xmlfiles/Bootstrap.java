@@ -1,9 +1,9 @@
 package com.exalt.xmlfiles;
 
+import com.exalt.xmlfiles.model.Device;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -16,7 +16,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-@Configuration
+//@Configuration
 public class Bootstrap {
     public static final ArrayList<Device> allDevices = new ArrayList<>();
     private static final List<File> allFiles = new ArrayList<>();
@@ -62,7 +62,7 @@ public class Bootstrap {
      * @return xml object inside Document object
      * @throws Exception documentBuilder handles exception
      */
-    private Document declareNeededObjects(File file) throws Exception {
+    public static Document declareNeededObjects(File file) throws Exception {
         DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
 
