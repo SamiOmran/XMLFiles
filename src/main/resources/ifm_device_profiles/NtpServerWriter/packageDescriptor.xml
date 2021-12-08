@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><package xmlns="http://www.cisco.com/cfr2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" packageId="NtpServerWriter" pdVersion="1" sdkVersion="1.0.391" xsi:schemaLocation="http://www.cisco.com/cfr2 xdePackage.xsd">
+    <version>0</version>
+    <requiredSDKVersion>0</requiredSDKVersion>
+    <description/>
+    <author/>
+    <license/>
+    <url><![CDATA[http://]]></url>
+    <searchTags/>
+    <packageDependency independentPackageId="system" requiredVersion="0"/>
+</package>

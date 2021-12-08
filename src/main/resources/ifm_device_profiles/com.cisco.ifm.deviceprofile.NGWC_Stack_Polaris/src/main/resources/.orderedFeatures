@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><dpRuntimeInfo xmlns:ext="http://com.cisco.xmp.deviceProfileExternalParameters" xmlns:param="http://com.cisco.xmp.deviceProfileSelectionParameters" formatVersion="3">
+    <orderedFeatureList>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_copyImageToDevice_Polaris</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_setBootOptions_C3850_V16_1</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_verifyRecommendation_NGWCStack</artifactId>
+            <type>feature</type>
+        </dependency>
+    </orderedFeatureList>
+    <configuration>
+        <param:productSeries param:operator="or">
+            <param:value param:operation="equal">999919900</param:value>
+            <param:value param:operation="equal">284838822</param:value>
+        </param:productSeries>
+        <param:softwareVersion param:operation="greaterAndEqual">16.1</param:softwareVersion>
+    </configuration>
+</dpRuntimeInfo>

@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Name: com.cisco.ifm.deviceprofile.Cat3560
+Created-By: XMP SDK 1.2.16.v20200622-1510
+

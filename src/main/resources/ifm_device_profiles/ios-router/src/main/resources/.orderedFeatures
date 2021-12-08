@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><dpRuntimeInfo xmlns:ext="http://com.cisco.xmp.deviceProfileExternalParameters" xmlns:param="http://com.cisco.xmp.deviceProfileSelectionParameters" formatVersion="2" sdkVersion="0.9.1.201508071020">
+    <orderedFeatureList>
+        <dependency override="replace">
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_physicalresource</artifactId>
+            <type>unknown</type>
+            <dependency override="replacee">
+                <groupId>com.cisco.ifm.feature</groupId>
+                <artifactId>feature_physicalresource-6k</artifactId>
+                <type>feature</type>
+            </dependency>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_flashdevice</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_memorypool</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_powerSupplyFanStatus-6k</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_rip</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_static</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_eigrp</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_ospf</artifactId>
+            <type>feature</type>
+        </dependency>
+    </orderedFeatureList>
+    <configuration>
+        <param:productFamily>268437899</param:productFamily>
+    </configuration>
+</dpRuntimeInfo>

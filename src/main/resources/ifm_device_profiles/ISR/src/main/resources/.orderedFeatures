@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?><dpRuntimeInfo xmlns:ext="http://com.cisco.xmp.deviceProfileExternalParameters" xmlns:param="http://com.cisco.xmp.deviceProfileSelectionParameters" formatVersion="3" sdkVersion="1.2.13.v20190827-2151">
+    <orderedFeatureList>
+        <dependency override="replace">
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_performance_base_memory</artifactId>
+            <dependency override="replacee">
+                <groupId>com.cisco.ifm.feature</groupId>
+                <artifactId>feature_performance_isr_memory</artifactId>
+                <type>feature</type>
+            </dependency>
+        </dependency>
+        <dependency override="replace">
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_copyImageFromDevice_cids</artifactId>
+            <dependency override="replacee">
+                <groupId>com.cisco.ifm.feature</groupId>
+                <artifactId>feature_copyImageFromDevice_isr</artifactId>
+                <type>feature</type>
+            </dependency>
+        </dependency>
+        <dependency override="replace">
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_runningConfig_cids</artifactId>
+            <dependency override="replacee">
+                <groupId>com.cisco.ifm.feature</groupId>
+                <artifactId>feature_runningConfig_IOS</artifactId>
+                <type>feature</type>
+            </dependency>
+        </dependency>
+        <dependency override="replace">
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_copy_running_to_startup</artifactId>
+            <dependency override="replacee">
+                <groupId>com.cisco.ifm.feature</groupId>
+                <artifactId>feature_copyRunningToStartup_IOS</artifactId>
+                <type>feature</type>
+            </dependency>
+        </dependency>
+        <dependency override="replace">
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_startupConfig_cids</artifactId>
+            <dependency override="replacee">
+                <groupId>com.cisco.ifm.feature</groupId>
+                <artifactId>feature_startupConfig_IOS</artifactId>
+                <type>feature</type>
+            </dependency>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_physical_port</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_performance_base_envtemp</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_vlan_isr</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>etherchannel_asr</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_sensor</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_stp</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_psfanstatus_isr</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_runningPackages_katana</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_upgradeAnalysis_ISR</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_RecommendStorage_ISR</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_verifyRecommendation_ISR</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_copyImageToDevice_ISR</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_setBootOptions_ISR</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_ifm_swim_capability_ISR</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_recommendSoftware_ISR</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_deployRunningConfig_ncs42xx</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_deployStartupConfig_IOS</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_reload_IOS</artifactId>
+            <type>feature</type>
+        </dependency>
+    </orderedFeatureList>
+    <configuration>
+        <param:productSeries param:operator="or">
+            <param:value param:operation="equal">279030230</param:value>
+            <param:value param:operation="equal">279030228</param:value>
+            <param:value param:operation="equal">279030231</param:value>
+            <param:value param:operation="equal">282770988</param:value>
+            <param:value param:operation="equal">282770989</param:value>
+            <param:value param:operation="equal">268438003</param:value>
+            <param:value param:operation="equal">282770991</param:value>
+            <param:value param:operation="equal">281998184</param:value>
+            <param:value param:operation="equal">268437619</param:value>
+            <param:value param:operation="equal">277822415</param:value>
+            <param:value param:operation="equal">268437946</param:value>
+            <param:value param:operation="equal">284339145</param:value>
+            <param:value param:operation="equal">285008037</param:value>
+        </param:productSeries>
+        <param:software param:operation="equal">IOS</param:software>
+    </configuration>
+</dpRuntimeInfo>

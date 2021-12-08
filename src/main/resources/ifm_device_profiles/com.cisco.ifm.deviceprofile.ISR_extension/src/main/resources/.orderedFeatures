@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><dpRuntimeInfo xmlns:ext="http://com.cisco.xmp.deviceProfileExternalParameters" xmlns:param="http://com.cisco.xmp.deviceProfileSelectionParameters" formatVersion="2" sdkVersion="1.1.1.201611282104">
+    <orderedFeatureList>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_ContainerKwaas</artifactId>
+            <type>feature</type>
+        </dependency>
+    </orderedFeatureList>
+    <configuration>
+        <param:productType>284389362</param:productType>
+		<param:productType>284389363</param:productType>
+		<param:productType>285018115</param:productType>
+        <param:productType>286006221</param:productType>
+        <param:productType>285018114</param:productType>
+        <param:productType>999991176</param:productType>
+    </configuration>
+</dpRuntimeInfo>

@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Created-By: XMP SDK 1.2.12.v20190404-1600
+Name: com.cisco.ifm.deviceprofile.ESR6300
+

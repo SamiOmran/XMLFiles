@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Name: com.cisco.ifm.deviceProfile.cisco
+Created-By: XMP SDK 0.9.1.201505080622
+

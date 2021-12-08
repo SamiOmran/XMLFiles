@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><dpRuntimeInfo xmlns:ext="http://com.cisco.xmp.deviceProfileExternalParameters" xmlns:param="http://com.cisco.xmp.deviceProfileSelectionParameters" formatVersion="3">
+    <orderedFeatureList>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_cdp</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_l2interface</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_physicalresource</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_CONNECTIVITYCHECK</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>L2Discovery</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_PhysicalPEP</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>compliance_mib2_collection</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_compliance_dynamic_show_commands</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_mne_collector</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>copyImageFromServerToDevice</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_utils</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>copyImageByServerFromDevice</artifactId>
+            <type>feature</type>
+        </dependency>
+    </orderedFeatureList>
+    <configuration>
+        <param:productFamily param:operator="or">
+            <param:value param:operation="equal">268437594</param:value>
+            <param:value param:operation="equal">268437639</param:value>
+            <param:value param:operation="equal">268437860</param:value>
+            <param:value param:operation="equal">268437899</param:value>
+            <param:value param:operation="equal">279966142</param:value>
+            <param:value param:operation="equal">268438038</param:value>
+            <param:value param:operation="equal">268438162</param:value>
+            <param:value param:operation="equal">276667589</param:value>
+            <param:value param:operation="equal">277381371</param:value>
+            <param:value param:operation="equal">278875240</param:value>
+            <param:value param:operation="equal">268439477</param:value>
+            <param:value param:operation="equal">268437717</param:value>
+            <param:value param:operation="equal">280789323</param:value>
+            <param:value param:operation="equal">878875243</param:value>
+            <param:value param:operation="equal">978875243</param:value>
+        </param:productFamily>
+    </configuration>
+</dpRuntimeInfo>

@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Name: wcs_ciscoThirdpartyWlc
+Created-By: XMP SDK 1.0.0.201610251854
+

@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Name: com.cisco.xmp.deviceprofile.ThirdPartyDeviceProfile
+Created-By: XMP SDK 1.0.0.201610251854
+
+Name: maven:com.cisco.ifm.feature:feature_topology_persistance_thirdpa
+ rty
+Collection-Tier: OPTIONAL
+
+Name: maven:com.cisco.ifm.feature:feature_l2interface_ThirdParty
+Collection-Tier: OPTIONAL
+
+Name: maven:com.cisco.ifm.feature:feature_virtualInterface_ThirdParty
+Collection-Tier: OPTIONAL
+

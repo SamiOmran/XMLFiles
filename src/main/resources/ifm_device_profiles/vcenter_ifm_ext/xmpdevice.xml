@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><!--Copyright (c) 2010 by Cisco Systems, Inc. All rights reserved.--><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.cisco.ifm.deviceprofile</groupId>
+  <artifactId>vcenter_ifm_ext</artifactId>
+  <version>3.850.0-SNAPSHOT</version>
+  <packaging>dar</packaging>
+ 	<parent>
+   <groupId>com.cisco.ifm</groupId>
+   <artifactId>ifm_device_profiles</artifactId>
+   <version>3.850.0-SNAPSHOT</version>
+	</parent>
+  <dependencies>
+  <dependency>
+    <groupId>com.cisco.ifm.feature</groupId>
+    <artifactId>feature_performance_vcenter</artifactId>
+    <version>${project.version}</version>
+    <type>feature</type>
+    <scope>compile</scope>
+  </dependency>
+   <dependency>
+  	<groupId>com.cisco.xmp.datacenter.deviceprofile</groupId>
+  	<artifactId>vcenter</artifactId>
+    	<version>0.4.23</version>
+    	<type>dar</type>
+    	<scope>compile</scope>
+  </dependency>
+  </dependencies>
+  <distributionManagement />
+  <properties>
+    <sdkVersion>0.8.1.201210082032</sdkVersion>
+    <formatVersion>2</formatVersion>
+	<jenkins_auto.skip>true</jenkins_auto.skip>
+  </properties>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>com.cisco.xmp.sdk</groupId>
+        <artifactId>xmp-maven-dar-plugin</artifactId>
+        <extensions>true</extensions>
+      </plugin>
+    </plugins>
+  </build>
+</project>

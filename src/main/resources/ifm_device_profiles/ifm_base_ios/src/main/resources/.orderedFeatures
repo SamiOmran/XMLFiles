@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><dpRuntimeInfo xmlns:ext="http://com.cisco.xmp.deviceProfileExternalParameters" xmlns:param="http://com.cisco.xmp.deviceProfileSelectionParameters" formatVersion="2" sdkVersion="0.8.0.201107070913">
+    <orderedFeatureList>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_performance_base_cpu</artifactId>
+            <version>0.2.0-SNAPSHOT</version>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_performance_base_memory</artifactId>
+            <version>0.2.0-SNAPSHOT</version>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_performance_base_interface</artifactId>
+            <version>0.2.0-SNAPSHOT</version>
+            <type>feature</type>
+        </dependency>
+    </orderedFeatureList>
+    <configuration>
+        <param:software param:operation="equal">IOS</param:software>
+        <param:productFamily>268437594</param:productFamily>
+        <param:productFamily>268437639</param:productFamily>
+        <param:productFamily>268437860</param:productFamily>
+        <param:productFamily>268437868</param:productFamily>
+        <param:productFamily>279966142</param:productFamily>
+        <param:productFamily>268438162</param:productFamily>
+        <param:productFamily>276667589</param:productFamily>
+        <param:productFamily>277381371</param:productFamily>
+        <param:productFamily>278875240</param:productFamily>
+        <param:productFamily>268439477</param:productFamily>
+        <param:productFamily>268437717</param:productFamily>
+        <param:productFamily>280789323</param:productFamily>
+        <param:productFamily>978875243</param:productFamily>
+    </configuration>
+</dpRuntimeInfo>

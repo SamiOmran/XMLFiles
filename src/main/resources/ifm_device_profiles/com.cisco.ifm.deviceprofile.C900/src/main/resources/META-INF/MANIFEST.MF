@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Created-By: XMP SDK 1.2.7.v20180314-1855
+Name: com.cisco.ifm.deviceprofile.C900
+

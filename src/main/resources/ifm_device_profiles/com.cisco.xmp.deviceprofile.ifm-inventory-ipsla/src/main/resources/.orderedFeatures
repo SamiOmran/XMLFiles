@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><dpRuntimeInfo xmlns:ext="http://com.cisco.xmp.deviceProfileExternalParameters" xmlns:param="http://com.cisco.xmp.deviceProfileSelectionParameters" formatVersion="3" sdkVersion="1.2.11.v20181129-0431">
+    <orderedFeatureList>
+        <dependency>
+            <groupId>com.cisco.xmp.feature</groupId>
+            <artifactId>ifm-inventory-ipsla</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.xmp.feature</groupId>
+            <artifactId>ifm-inevntory-ipsla-supportedoperations</artifactId>
+            <type>feature</type>
+        </dependency>
+    </orderedFeatureList>
+    <configuration>
+        <param:software param:operation="equal">IOS</param:software>
+        <param:productSeries param:operator="and">
+            <param:value param:operation="notEqual">286291049</param:value>
+            <param:value param:operation="notEqual">286319267</param:value>
+            <param:value param:operation="notEqual">286318884</param:value>
+        </param:productSeries>
+    </configuration>
+</dpRuntimeInfo>

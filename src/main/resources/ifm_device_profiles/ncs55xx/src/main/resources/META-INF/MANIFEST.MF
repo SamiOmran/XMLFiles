@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Name: ncs55xx
+Created-By: XMP SDK 0.9.1.201603111733
+

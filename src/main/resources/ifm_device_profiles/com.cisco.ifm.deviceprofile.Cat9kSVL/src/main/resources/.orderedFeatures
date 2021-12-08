@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><dpRuntimeInfo xmlns:ext="http://com.cisco.xmp.deviceProfileExternalParameters" xmlns:param="http://com.cisco.xmp.deviceProfileSelectionParameters" formatVersion="3" sdkVersion="1.2.13.v20190701-1548">
+    <orderedFeatureList>
+        <dependency override="replace">
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_flashdevice</artifactId>
+            <dependency override="replacee">
+                <groupId>com.cisco.ifm.feature</groupId>
+                <artifactId>flashDeviceCat9kCLI</artifactId>
+                <type>feature</type>
+            </dependency>
+        </dependency>
+    </orderedFeatureList>
+    <configuration>
+        <param:productType param:operator="or">
+            <param:value param:operation="equal">286320497</param:value>
+        </param:productType>
+        <param:softwareVersion param:operation="greaterAndEqual">16.1</param:softwareVersion>
+    </configuration>
+</dpRuntimeInfo>

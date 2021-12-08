@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><dpRuntimeInfo xmlns:ext="http://com.cisco.xmp.deviceProfileExternalParameters" xmlns:param="http://com.cisco.xmp.deviceProfileSelectionParameters" formatVersion="2" sdkVersion="1.1.0.201607082255">
+    <orderedFeatureList>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_enhanced_mempool</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_processConfig_NEXUS</artifactId>
+            <type>feature</type>
+        </dependency>
+    </orderedFeatureList>
+    <configuration>
+        <param:productType>282099480</param:productType>
+        <param:productType>282099479</param:productType>
+        <param:productType>283122475</param:productType>
+        <param:productType>283444903</param:productType>
+        <param:productType>283823782</param:productType>
+        <param:productType>283757883</param:productType>
+    </configuration>
+</dpRuntimeInfo>

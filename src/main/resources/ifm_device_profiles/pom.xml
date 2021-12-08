@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.cisco.ifm</groupId>
+	<artifactId>ifm_device_profiles</artifactId>
+	<version>3.860.7-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<description>agregator for device profiles</description>
+	<dependencies />
+
+	<build>
+
+		<plugins>
+
+			<plugin>
+				<groupId>com.cisco.xmp.sdk</groupId>
+				<artifactId>xmp-maven-dar-plugin</artifactId>
+				<version>1.1.9</version>
+				<configuration>
+				<failOnError>false</failOnError>
+					<createSDU>true</createSDU>
+				</configuration>
+				<extensions>true</extensions>
+			</plugin>
+
+			<plugin>
+				<artifactId>maven-enforcer-plugin</artifactId>
+				<dependencies>
+					<dependency>
+						<groupId>com.cisco.nmtgre</groupId>
+						<artifactId>release-rules</artifactId>
+						<version>1.0.2</version>
+					</dependency>
+				</dependencies>
+				<executions>
+					<execution>
+						<id>enforcer-always</id>
+						<phase>validate</phase>
+						<goals>
+							<goal>enforce</goal>
+						</goals>
+						<configuration>
+							<fail>${xmp.enforcer.fail}</fail>
+							<rules>
+								<!-- no snapshots allowed during release version builds -->
+								<requireReleaseDeps>
+									<message>No Snapshots Allowed During Release!</message>
+									<onlyWhenRelease>true</onlyWhenRelease>
+								</requireReleaseDeps>
+							</rules>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+	<properties>
+		<release.commit.comment>${env.SVN_COMMIT_COMMENT}</release.commit.comment>
+		<release.commit.user>${env.SVN_COMMIT_USER}</release.commit.user>
+		<release.settings.file>${env.M2_HOME}/conf/ifm-release-only-settings.xml</release.settings.file>
+<connection>scm:git:ssh://git@bitbucket-eng-sjc2.cisco.com:7999/cvgpi/device_packages_ifm.git</connection>
+	</properties>
+
+
+
+	<profiles>
+		<profile>
+			<id>release-profile</id>
+			<build>
+				<plugins>
+					<plugin>
+						<artifactId>maven-release-plugin</artifactId>
+						<version>2.4.2</version>
+						<configuration>
+							<scmCommentPrefix>${release.commit.comment}
+								[maven-release-plugin]</scmCommentPrefix>
+              <preparationGoals>-s ${release.settings.file} clean install
+								-Dmaven.test.skip=true</preparationGoals>
+              <tagBase>${release.tag.base}</tagBase>
+              <goals>-s ${release.settings.file} deploy -Dmaven.test.skip=true</goals>
+              <username>${release.commit.user}</username>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
+  <distributionManagement>
+    <!-- The variables ${distribution.repository.url}, ${distribution.snapshotRepository.url}
+			are set in settings.xml file -->
+
+		<repository>
+			<id>nmtg-ifm</id>
+			<name>NMTG Release Repository</name>
+			<url>${distribution.repository.url}</url>
+		</repository>
+		<snapshotRepository>
+			<id>nmtg-ifm-snapshots</id>
+			<name>NMTG Snapshot Repository</name>
+			<url>${distribution.snapshotRepository.url}</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+	<modules>
+<module>com.cisco.ifm.deviceprofile.VG_3X0/xmpdevice.xml</module>
+<module>com.cisco.ifm.deviceprofile.C900XE/xmpdevice.xml</module>
+<module>com.cisco.xmp.deviceprofile.VG450/xmpdevice.xml</module>
+<module>com.cisco.ifm.deviceprofile.IE3400_Polaris/xmpdevice.xml</module>
+<module>com.cisco.ifm.deviceprofile.ESR6300/xmpdevice.xml</module>
+<module>com.cisco.ifm.deviceprofile.Cat9kSVL/xmpdevice.xml</module>
+<module>com.cisco.ifm.deviceProfile.C1000/xmpdevice.xml</module>
+<module>com.cisco.ifm.deviceprofile.eventbased_archivecommits_IOSXR/xmpdevice.xml</module>
+<module>com.cisco.ifm.deviceprofile.eventbased_archiveindexes_IOS/xmpdevice.xml</module>
+<module>ifm-generic-base/xmpdevice.xml</module>
+<module>cisco/xmpdevice.xml</module>
+<module>ios/xmpdevice.xml</module>
+<module>ios-router/xmpdevice.xml</module>
+<module>ios-switch/xmpdevice.xml</module>
+<module>autonomousAP-Base/xmpdevice.xml</module>
+<module>com.cisco.ifm.deviceprofile.ap-customized/xmpdevice.xml</module>
+<module>cat2k/xmpdevice.xml</module>
+<module>cat3750/xmpdevice.xml</module>
+<module>cat3k/xmpdevice.xml</module>
+<module>cat4k/xmpdevice.xml</module>
+<module>cat6k/xmpdevice.xml</module>
+<module>ISR/xmpdevice.xml</module>
+<module>Rtr800/xmpdevice.xml</module>
+<module>ASR/xmpdevice.xml</module>
+<module>ASR1K/xmpdevice.xml</module>
+<module>Nexus7k/xmpdevice.xml</module>
+<module>NAM/xmpdevice.xml</module>
+<module>WAE/xmpdevice.xml</module>
+<module>wcs_ciscoWlc/xmpdevice.xml</module>
+<module>wcs_ciscoThirdpartyWlc/xmpdevice.xml</module>
+<module>wcs_ciscoWlc_katana/xmpdevice.xml</module>
+<module>ifm_ciscoWlc_katana/xmpdevice.xml</module>
+<module>NGWC/xmpdevice.xml</module>
+<module>CGR/xmpdevice.xml</module>
+<module>ESR/xmpdevice.xml</module>
+<module>MWR/xmpdevice.xml</module>
+<module>CBS/xmpdevice.xml</module>
+<module>IE/xmpdevice.xml</module>
+<module>IE2k/xmpdevice.xml</module>
+<module>IOS-XR/xmpdevice.xml</module>
+<module>IOS-XR-3x/xmpdevice.xml</module>
+<module>VG/xmpdevice.xml</module>
+<module>ISR_reference/xmpdevice.xml</module>
+<module>MDS/xmpdevice.xml</module>
+<module>Rtr7k/xmpdevice.xml</module>
+<module>com.cisco.ifm.deviceprofile.ucs/xmpdevice.xml</module>
+<module>metroethernet/xmpdevice.xml</module>
+<module>MAR/xmpdevice.xml</module>
+<module>CGS/xmpdevice.xml</module>
+<module>CRS/xmpdevice.xml</module>
+<module>GSR/xmpdevice.xml</module>
+<module>com.cisco.ifm.deviceprofile.ISR_extension/xmpdevice.xml</module>
+<module>TechnologyReadinessMetaData/xmpdevice.xml</module>
+<module>com.cisco.ifm.deviceProfile.ASA/xmpdevice.xml</module>
+<module>CSR1000V/xmpdevice.xml</module>
+<module>com.cisco.ifm.deviceprofile.ucs_c_series/xmpdevice.xml</module>
+<module>com.cisco.ifm.deviceprofile.ACE/xmpdevice.xml</module>
+<module>com.cisco.ifm.deviceProfile.NGA/xmpdevice.xml</module>
+<module>com.cisco.ifm.deviceProfile.SBS/xmpdevice.xml</module>
+<module>com.cisco.ifm.deviceprofile.NGWC_Stack/xmpdevice.xml</module>
+<module>com.cisco.ifm.deviceprofile.wlckatana_stack/xmpdevice.xml</module>
+<module>com.cisco.ifm.deviceprofile.nexus_9k/xmpdevice.xml</module>
+<module>com.cisco.ifm.deviceprofile.MS200x/xmpdevice.xml</module>
+<module>com.cisco.ifm.deviceprofile.SG220/xmpdevice.xml</module>
+<module>com.cisco.ifm.deviceprofile.cat4k_wireless/xmpdevice.xml</module>
+<module>com.cisco.ifm.deviceprofile.ASA-SM/xmpdevice.xml</module>
+<module>com.cisco.ifm.deviceprofile.ASA-Non-SM/xmpdevice.xml</module>
+<module>com.cisco.ifm.deviceprofile.SG500/xmpdevice.xml</module>
+<module>com.cisco.ifm.deviceProfile.SG300/xmpdevice.xml</module>
+<module>ASR900/xmpdevice.xml</module>
+<module>ASR901/xmpdevice.xml</module>
+<module>ifm_generic_profile/xmpdevice.xml</module>
+<module>ncs2k/xmpdevice.xml</module>
+<module>ncs4k/xmpdevice.xml</module>
+<module>com.cisco.ifm.deviceprofile.Cat3560-CX/xmpdevice.xml</module>
+<module>com.cisco.xmp.deviceprofile.ISR_4k/xmpdevice.xml</module>
+<module>com.cisco.ifm.deviceprofile.ASAv/xmpdevice.xml</module>
+<module>com.cisco.xmp.deviceprofile.ME1200/xmpdevice.xml</module>
+<module>com.cisco.ifm.deviceprofile.NGWC_Stack_Polaris/xmpdevice.xml</module>
+<module>com.cisco.ifm.deviceprofile.ncs1k/xmpdevice.xml</module>
+<module>nexus_7k/xmpdevice.xml</module>
+<module>nexus_3k/xmpdevice.xml</module>
+<module>ncs42xx/xmpdevice.xml</module>
+<module>com.cisco.ifm.deviceProfile.IR800/xmpdevice.xml</module>
+<module>nexus_1kv/xmpdevice.xml</module>
+<module>ncs55xx/xmpdevice.xml</module>
+<module>ncs6k/xmpdevice.xml</module>
+<module>com.cisco.xmp.deviceprofile.nexus__31108/xmpdevice.xml</module>
+<module>com.cisco.xmp.deviceprofile.ThirdPartyDeviceProfile/xmpdevice.xml</module>
+<module>com.cisco.prime.deviceprofile.IE1K/xmpdevice.xml</module>
+<module>com.cisco.ifm.deviceprofile.SVO/xmpdevice.xml</module>
+<module>com.cisco.ifm.deviceProfile.cat2960/xmpdevice.xml</module>
+<module>com.cisco.ifm.deviceprofile.Cat3560/xmpdevice.xml</module>
+<module>com.cisco.ifm.deviceprofile.IE4K/xmpdevice.xml</module>
+<module>com.cisco.ifm.deviceprofile.SG350/xmpdevice.xml</module>
+<module>com.cisco.ifm.deviceprofile.SG550/xmpdevice.xml</module>
+<module>com.cisco.ifm.deviceProfile.ISRv/xmpdevice.xml</module>
+<module>com.cisco.ifm.deviceProfile.CDB/xmpdevice.xml</module>
+<module>com.cisco.ifm.deviceprofile.cat9k/xmpdevice.xml</module>
+<module>com.cisco.ifm.deviceprofile.ASR920/xmpdevice.xml</module>
+<module>com.cisco.xmp.deviceprofile.Cat1760/xmpdevice.xml</module>
+<module>com.cisco.ifm.deviceprofile.ios_lisp/xmpdevice.xml</module>
+<module>com.cisco.ifm.deviceprofile.iosxe_lisp/xmpdevice.xml</module>
+<module>com.cisco.ifm.deviceProfile.C1100/xmpdevice.xml</module>
+<module>com.cisco.ifm.deviceprofile.eWLC/xmpdevice.xml</module>
+<module>com.cisco.xmp.deviceprofile.SmartInventoryDetail/xmpdevice.xml</module>
+<module>com.cisco.ifm.deviceProfile.IR800L/xmpdevice.xml</module>
+<module>com.cisco.ifm.deviceProfile.ASA_TEMPRATURE_MONITOR/xmpdevice.xml</module>
+<module>com.cisco.ifm.deviceProfile.ASA_TEMPRATURE_MONITOR-Legacy/xmpdevice.xml</module>
+<module>com.cisco.ifm.deviceprofile.ME/xmpdevice.xml</module>
+<module>IE_Base/xmpdevice.xml</module>
+<module>com.cisco.ifm.deviceprofile.cat9k_Stack/xmpdevice.xml</module>
+<module>ThirdParty/xmpdevice.xml</module>
+<module>com.cisco.xmp.deviceprofile.ifm-inventory-ipsla/xmpdevice.xml</module>
+<module>com.cisco.ifm.deviceprofile.aironet_Series_AP/xmpdevice.xml</module>
+<module>com.cisco.ifm.deviceprofile.ISA3000/xmpdevice.xml</module>
+<module>com.cisco.ifm.deviceprofile.C900/xmpdevice.xml</module>
+<module>com.cisco.xmp.deviceprofile.GenericDeviceProfile/xmpdevice.xml</module>
+<module>com.cisco.ifm.deviceprofile.ASR9K-64/xmpdevice.xml</module>
+<module>com.cisco.ifm.deviceprofile.ncs540l/xmpdevice.xml</module>
+</modules>
+</project>

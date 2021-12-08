@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?><dpRuntimeInfo xmlns:ext="http://com.cisco.xmp.deviceProfileExternalParameters" xmlns:param="http://com.cisco.xmp.deviceProfileSelectionParameters" formatVersion="2" sdkVersion="1.0.0.201610251854">
+    <orderedFeatureList>
+        <dependency override="replace">
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_copyImageToDevice_cids</artifactId>
+            <type>Feature</type>
+            <dependency override="replacee">
+                <groupId>com.cisco.ifm.feature</groupId>
+                <artifactId>feature_copyImageToDevice_NAM</artifactId>
+                <type>feature</type>
+            </dependency>
+        </dependency>
+        <dependency override="replace">
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_runningConfig_cids</artifactId>
+            <type>Feature</type>
+            <dependency override="replacee">
+                <groupId>com.cisco.ifm.feature</groupId>
+                <artifactId>feature_runningConfig_NAM</artifactId>
+                <type>feature</type>
+            </dependency>
+        </dependency>
+        <dependency override="replace">
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_recommendSoftware_cids</artifactId>
+            <type>Feature</type>
+            <dependency override="replacee">
+                <groupId>com.cisco.ifm.feature</groupId>
+                <artifactId>feature_recommendSoftware_ISR</artifactId>
+                <type>feature</type>
+            </dependency>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_physicalresource</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_image_nam</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_host_nam</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_IPinterface</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_SyslogEnableConfig</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_compliance_show_commands_NAM_PAS</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_PhysicalPEP_NAM</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_deployRunningConfig_NAM</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_reload_NAM</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_runningPackages_katana</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_verifyRecommendation_NAM</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_activateDevice_NAM</artifactId>
+            <type>feature</type>
+        </dependency>
+    </orderedFeatureList>
+    <configuration>
+        <param:software param:isRegex="true" param:operation="equal">((Network Analysis Module)|(NAM)|(Virtual Blade on Nexus Appliance))</param:software>
+        <param:productSeries>999990500</param:productSeries>
+        <param:productSeries>272883947</param:productSeries>
+    </configuration>
+</dpRuntimeInfo>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><dpRuntimeInfo xmlns:ext="http://com.cisco.xmp.deviceProfileExternalParameters" xmlns:param="http://com.cisco.xmp.deviceProfileSelectionParameters" formatVersion="3" sdkVersion="1.2.13.v20190827-2151">
+    <orderedFeatureList>
+        <dependency override="replace">
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_runningConfig_cids</artifactId>
+            <dependency override="replacee">
+                <groupId>com.cisco.ifm.feature</groupId>
+                <artifactId>feature_runningConfig_IOS</artifactId>
+                <type>feature</type>
+            </dependency>
+        </dependency>
+        <dependency override="replace">
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_startupConfig_cids</artifactId>
+            <dependency override="replacee">
+                <groupId>com.cisco.ifm.feature</groupId>
+                <artifactId>feature_startupConfig_IOS</artifactId>
+                <type>feature</type>
+            </dependency>
+        </dependency>
+        <dependency override="replace">
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_copy_running_to_startup</artifactId>
+            <dependency override="replacee">
+                <groupId>com.cisco.ifm.feature</groupId>
+                <artifactId>feature_copyRunningToStartup_IOS</artifactId>
+                <type>feature</type>
+            </dependency>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_deployRunningConfig_IOS</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_reload_IOS</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_deployStartupConfig_IOS</artifactId>
+            <type>feature</type>
+        </dependency>
+    </orderedFeatureList>
+    <configuration>
+        <param:productType param:operation="equal">286308662</param:productType>
+        <param:software param:operation="equal">IOS</param:software>
+    </configuration>
+</dpRuntimeInfo>

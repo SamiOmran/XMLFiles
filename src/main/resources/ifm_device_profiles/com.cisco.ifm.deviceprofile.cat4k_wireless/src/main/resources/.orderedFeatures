@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><dpRuntimeInfo xmlns:ext="http://com.cisco.xmp.deviceProfileExternalParameters" xmlns:param="http://com.cisco.xmp.deviceProfileSelectionParameters" formatVersion="2" sdkVersion="0.8.2.201403202131">
+    <orderedFeatureList>
+        <dependency override="replace">
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_performance_base_memory</artifactId>
+            <type>Unknown(feature)</type>
+            <dependency override="replacee">
+                <groupId>com.cisco.ifm.feature</groupId>
+                <artifactId>feature_performance_ngwc_memory</artifactId>
+                <type>feature</type>
+            </dependency>
+        </dependency>
+    </orderedFeatureList>
+    <configuration>
+        <param:software param:operation="equal">IOS</param:software>
+        <param:softwareVariant param:operation="equal">XE</param:softwareVariant>
+        <param:softwareVersion param:operation="greaterAndEqual">3.7</param:softwareVersion>
+        <param:productType>281755878</param:productType>
+        <param:productType>281549964</param:productType>
+        <param:productType>281550274</param:productType>
+        <param:productType>281550283</param:productType>
+        <param:productType>283609932</param:productType>
+        <param:productType>283609966</param:productType>
+        <ext:extInvCollectionScheduleName>wlcSchedule</ext:extInvCollectionScheduleName>
+		<ext:snmpLock>true</ext:snmpLock>
+    </configuration>
+</dpRuntimeInfo>

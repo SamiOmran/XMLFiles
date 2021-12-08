@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><dpRuntimeInfo xmlns:ext="http://com.cisco.xmp.deviceProfileExternalParameters" xmlns:param="http://com.cisco.xmp.deviceProfileSelectionParameters" formatVersion="3" sdkVersion="1.2.13.v20190827-2151">
+    <orderedFeatureList>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_performance_base_envtemp</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_TrustSec</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_deployStartupConfig_IOS</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_startupConfig_IOS</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_runningConfig_IOS</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_copyRunningToStartup_IOS</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_reload_IOS</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_deployRunningConfig_IOS</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_compliance_show_commands_IOS_Cat_PAS</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_compliance_mib_collection_Cat_OS</artifactId>
+            <type>feature</type>
+        </dependency>
+    </orderedFeatureList>
+    <configuration>
+        <param:productSeries param:operator="or">
+            <param:value param:operation="equal">278542537</param:value>
+            <param:value param:operation="equal">280810896</param:value>
+            <param:value param:operation="equal">280148778</param:value>
+            <param:value param:operation="equal">282063189</param:value>
+            <param:value param:operation="equal">283603233</param:value>
+            <param:value param:operation="equal">282895848</param:value>
+            <param:value param:operation="equal">280148788</param:value>
+            <param:value param:operation="equal">999991009</param:value>
+        </param:productSeries>
+        <param:software param:operation="equal">IOS</param:software>
+        <param:softwareVersion param:operation="greaterAndEqual">12.2</param:softwareVersion>
+    </configuration>
+</dpRuntimeInfo>

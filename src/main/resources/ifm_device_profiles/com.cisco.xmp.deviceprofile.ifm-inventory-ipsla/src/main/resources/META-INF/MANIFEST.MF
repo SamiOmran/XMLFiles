@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Created-By: XMP SDK 1.2.1.201709152045
+Name: com.cisco.xmp.deviceprofile.ifm-inventory-ipsla

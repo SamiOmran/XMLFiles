@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.cisco.ifm</groupId>
+    <artifactId>ifm_device_profiles</artifactId>
+    <version>3.860.7-SNAPSHOT</version>
+  </parent>
+  <groupId>com.cisco.ifm.deviceProfile</groupId>
+  <artifactId>GSR</artifactId>
+  <version>3.860.7-SNAPSHOT</version>
+  <packaging>dar</packaging>
+  <scm>
+    <connection>scm:svn:https://wwwin-svn-sjc.cisco.com/eng/ifm/trunk/device_packages/ifm_device_profiles/GSR</connection>
+    <developerConnection>scm:svn:https://wwwin-svn-sjc.cisco.com/eng/ifm/trunk/device_packages/ifm_device_profiles/GSR</developerConnection>
+    <url>https://wwwin-svn-sjc.cisco.com/eng/ifm/trunk/device_packages/ifm_device_profiles/GSR</url>
+    <tag>device_packages-3.851.7-SNAPSHOT</tag>
+  </scm>
+  <ciManagement />
+  <distributionManagement />
+  <properties>
+    <release.tag.base>https://wwwin-svn.cisco.com/svn/ifm/tags</release.tag.base>
+    <release.commit.comment>${env.SVN_COMMIT_COMMENT}</release.commit.comment>
+    <release.commit.user>${env.SVN_COMMIT_USER}</release.commit.user>
+    <project.version>3.850.0-SNAPSHOT</project.version>
+    <formatVersion>2</formatVersion>
+    <sdkVersion>0.8.2.201403202131</sdkVersion>
+    <release.settings.file>${env.M2_HOME}/conf/ifm-release-only-settings.xml</release.settings.file>
+  </properties>
+  <dependencies>
+    <dependency>
+      <groupId>com.cisco.ifm.deviceProfile</groupId>
+      <artifactId>ios-router</artifactId>
+      <version>${project.version}</version>
+      <type>dar</type>
+      <exclusions>
+        <exclusion>
+          <artifactId>feature_performance_base_memory</artifactId>
+          <groupId>com.cisco.ifm.feature</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>com.cisco.ifm.feature</groupId>
+      <artifactId>feature_performance_iosxr3x_memory</artifactId>
+      <version>${project.version}</version>
+      <type>feature</type>
+    </dependency>
+  </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>com.cisco.xmp.sdk</groupId>
+        <artifactId>xmp-maven-dar-plugin</artifactId>
+        <extensions>true</extensions>
+      </plugin>
+    </plugins>
+  </build>
+</project>

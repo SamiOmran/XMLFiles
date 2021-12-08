@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+    <groupId>com.cisco.ifm</groupId>
+    <artifactId>ifm_device_profiles</artifactId>
+    <version>3.860.7-SNAPSHOT</version>
+ </parent>
+	<groupId>com.cisco.ifm.deviceProfile</groupId>
+	<artifactId>wcs_ciscoThirdpartyWlc</artifactId>
+	<version>3.860.7-SNAPSHOT</version>
+	<packaging>dar</packaging>
+  <properties>
+    <sdkVersion>0.8.1.201107200913</sdkVersion>
+    <formatVersion>2</formatVersion>
+  </properties>
+	<dependencies>
+		<dependency>
+			<groupId>com.cisco.ifm.deviceProfile</groupId>
+			<artifactId>cisco</artifactId>
+			<version>${project.version}</version>
+			<type>dar</type>
+			<exclusions>
+				<exclusion>
+					<artifactId>feature_cdp</artifactId>
+					<groupId>com.cisco.ifm.feature</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>feature_l2interface</artifactId>
+					<groupId>com.cisco.ifm.feature</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>feature_physicalresource</artifactId>
+					<groupId>com.cisco.ifm.feature</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>com.cisco.xmp.sdk</groupId>
+				<artifactId>xmp-maven-dar-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+</project>

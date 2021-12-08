@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><workflow xmlns="http://www.cisco.com/cfr2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" fileFormatVersion="1" sdkVersion="1.0.391" xsi:schemaLocation="http://www.cisco.com/cfr2 xdeProcedure.xsd">
+    <import>NtpServerWriterpal.xpa</import>
+    <import>XDE</import>
+    <import>system</import>
+    <parameter>$device</parameter>
+    <parameter>$paramMap</parameter>
+    <startStep id="Step1" next="pmalagad:120213162001250"/>
+    <returnStep id="Step2">
+        <result>$paramMap</result>
+    </returnStep>
+    <declareStep id="pmalagad:120213162001250" next="pmalagad:12021316532600">
+        <active>1</active>
+        <varname1>$configCLILines</varname1>
+        <rhs1>NtpServerWriterpal.getCLI($device, $paramMap)</rhs1>
+    </declareStep>
+    <callStep id="pmalagad:120213162123218" next="Step2">
+        <active>1</active>
+        <function1>NtpServerWriterpal.pushToDevice($device, $configLines)</function1>
+    </callStep>
+    <declareStep id="pmalagad:12021316532600" next="pmalagad:120213162123218">
+        <active>1</active>
+        <varname1>$configLines</varname1>
+        <rhs1>string.split("[\n\r]+", $configCLILines)</rhs1>
+    </declareStep>
+</workflow>

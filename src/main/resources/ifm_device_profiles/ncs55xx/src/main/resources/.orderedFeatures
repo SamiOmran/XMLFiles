@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><dpRuntimeInfo xmlns:ext="http://com.cisco.xmp.deviceProfileExternalParameters" xmlns:param="http://com.cisco.xmp.deviceProfileSelectionParameters" formatVersion="3" sdkVersion="1.2.13.v20190827-2151">
+    <orderedFeatureList>
+        <dependency override="replace">
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_powerSupplyFanStatus-6k-XR</artifactId>
+            <dependency override="replacee">
+                <groupId>com.cisco.ifm.feature</groupId>
+                <artifactId>feature_powerSupplyFanStatus-NCS4k</artifactId>
+                <type>feature</type>
+            </dependency>
+        </dependency>
+        <dependency override="replace">
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_activateDevice_XR</artifactId>
+            <dependency override="replacee">
+                <groupId>com.cisco.ifm.feature</groupId>
+                <artifactId>feature_activateDevice_NCS4K</artifactId>
+                <type>feature</type>
+            </dependency>
+        </dependency>
+        <dependency override="replace">
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_copyImageToDevice_IOSXR</artifactId>
+            <dependency override="replacee">
+                <groupId>com.cisco.ifm.feature</groupId>
+                <artifactId>feature_copyImageToDevice_NCS_IOSXR</artifactId>
+                <type>feature</type>
+            </dependency>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_recommendStorage_NCS4K</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_overwriteRunningConfig_ncs4k</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_copyAdminConfigFromDevice_NCS4K</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_deployAdminConfig_ncs55xx</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_upgradeAnalysis_Katana</artifactId>
+            <type>feature</type>
+        </dependency>
+    </orderedFeatureList>
+    <configuration>
+        <param:sysObjectId param:operator="or">
+            <param:value param:operation="equal">1.3.6.1.4.1.9.1.2349</param:value>
+            <param:value param:operation="equal">1.3.6.1.4.1.9.1.2317</param:value>
+            <param:value param:operation="equal">1.3.6.1.4.1.9.1.2318</param:value>
+            <param:value param:operation="equal">1.3.6.1.4.1.9.1.2430</param:value>
+            <param:value param:operation="equal">1.3.6.1.4.1.9.1.2428</param:value>
+            <param:value param:operation="equal">1.3.6.1.4.1.9.1.2856</param:value>
+        </param:sysObjectId>
+    </configuration>
+</dpRuntimeInfo>

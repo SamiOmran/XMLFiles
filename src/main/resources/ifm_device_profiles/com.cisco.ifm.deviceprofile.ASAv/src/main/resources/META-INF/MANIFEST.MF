@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Name: com.cisco.ifm.deviceprofile.ASAv
+Created-By: XMP SDK 0.9.1.201510011819
+
+Name: maven:com.cisco.ifm.feature:feature_interface_firewall
+Collection-Schedule: device_feature_schedule_5
+

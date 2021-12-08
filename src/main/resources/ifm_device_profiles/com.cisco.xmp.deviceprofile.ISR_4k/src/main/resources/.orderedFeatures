@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><dpRuntimeInfo xmlns:ext="http://com.cisco.xmp.deviceProfileExternalParameters" xmlns:param="http://com.cisco.xmp.deviceProfileSelectionParameters" formatVersion="3" sdkVersion="1.2.13.v20190827-2151">
+    <orderedFeatureList>
+        <dependency override="replace">
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_performance_base_envtemp</artifactId>
+            <dependency override="replacee">
+                <groupId>com.cisco.ifm.feature</groupId>
+                <artifactId>feature_performance_base1_envtemp</artifactId>
+                <type>feature</type>
+            </dependency>
+        </dependency>
+        <dependency override="replace">
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_reloadDevice_cids</artifactId>
+            <dependency override="replacee">
+                <groupId>com.cisco.ifm.feature</groupId>
+                <artifactId>feature_activateDevice_usingReloadTemplate</artifactId>
+                <type>feature</type>
+            </dependency>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_copyRunningToStartup_IOS</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_vlan_switch_isr</artifactId>
+            <type>feature</type>
+        </dependency>
+    </orderedFeatureList>
+    <configuration>
+        <param:productSeries param:operator="or">
+            <param:value param:operation="equal">285008137</param:value>
+            <param:value param:operation="equal">284339145</param:value>
+            <param:value param:operation="equal">285008037</param:value>
+            <param:value param:operation="equal">286281708</param:value>
+            <param:value param:operation="equal">286320599</param:value>
+        </param:productSeries>
+        <param:software param:operation="equal">IOS</param:software>
+    </configuration>
+</dpRuntimeInfo>

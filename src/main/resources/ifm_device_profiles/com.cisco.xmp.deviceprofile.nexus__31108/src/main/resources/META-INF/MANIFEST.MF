@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Name: com.cisco.xmp.deviceprofile.nexus__31108
+Created-By: XMP SDK 0.9.1.201603291549
+

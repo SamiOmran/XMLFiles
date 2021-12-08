@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><dpRuntimeInfo xmlns:ext="http://com.cisco.xmp.deviceProfileExternalParameters" xmlns:param="http://com.cisco.xmp.deviceProfileSelectionParameters" formatVersion="3" sdkVersion="1.2.10.v20180904-2226">
+    <orderedFeatureList/>
+    <configuration>
+        <param:productSeries param:operation="equal">270675370</param:productSeries>
+        <param:productType param:operation="equal">286320713</param:productType>
+    </configuration>
+</dpRuntimeInfo>

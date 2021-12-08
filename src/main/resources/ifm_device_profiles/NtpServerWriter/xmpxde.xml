@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--Copyright (c) 2010 by Cisco Systems, Inc. All rights reserved.--><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<parent>
+		<artifactId>ifm_device_xdes</artifactId>
+		<groupId>com.cisco.ifm</groupId>
+		<version>3.850.0-SNAPSHOT</version>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+  <groupId>com.cisco.ifm.config.xde</groupId>
+  <artifactId>NtpServerWriter</artifactId>
+  <version>3.850.0-SNAPSHOT</version>
+  <packaging>xar</packaging>
+  <description/>
+  <scm>
+<connection>scm:git:ssh://git@bitbucket-eng-sjc2.cisco.com:7999/cvgpi/device_packages_ifm.git</connection>
+<developerConnection>scm:git:ssh://git@bitbucket-eng-sjc2.cisco.com:7999/cvgpi/device_packages_ifm.git</developerConnection>
+<url>ssh://git@bitbucket-eng-sjc2.cisco.com:7999/cvgpi/device_packages_ifm.git</url>
+  </scm>
+  <ciManagement>
+    <system>Hudson</system>
+    <url>https://sjc-nmtgci-01.cisco.com:9081/job/</url>
+  </ciManagement>
+  <distributionManagement>
+  	<repository>
+  		<id>nmtg-ifm</id>
+  		<name>NMTG/IFM</name>
+  		<url>${distribution.repository.url}</url>
+  	</repository>
+  	<snapshotRepository>
+  		<id>nmtg-ifm-snapshots</id>
+  		<name>NMTG/IFM Snapshots</name>
+  		<url>${distribution.snapshotRepository.url}</url>
+  	</snapshotRepository>
+  	<site>
+  		<id>website</id>
+  		<name>website</name>
+  		<url>${distribution.site.url}/${project.artifactId}</url>
+  	</site>
+  </distributionManagement>
+  <properties>
+    <sdkVersion>0.8.1.201201041934</sdkVersion>
+  </properties>
+  <build>
+    <resources>
+      <resource>
+        <directory>${basedir}</directory>
+        <excludes>
+          <exclude>target</exclude>
+        </excludes>
+      </resource>
+    </resources>
+    <plugins>
+      <plugin>
+        <groupId>com.cisco.xmp.sdk</groupId>
+        <artifactId>xmp-maven-xar-plugin</artifactId>
+        <version>1.0</version>
+        <extensions>true</extensions>
+      </plugin>
+    </plugins>
+  </build>
+</project>

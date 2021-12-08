@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="ASCII"?>
+<org.eclipse.tigerstripe.dependencies:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:org.eclipse.tigerstripe.dependencies="http:///org/eclipse/tigerstripe/dependencies.ecore" currentLayer="//@layers.0">
+  <kinds id="DEVICE">
+    <style backgroundColor="14221270" foregroundColor="12247480"/>
+  </kinds>
+  <kinds id="FEATURE">
+    <style backgroundColor="16777182" foregroundColor="9671466"/>
+  </kinds>
+  <layers id="DEVICE.ifm_base_ios">
+    <shapes xsi:type="org.eclipse.tigerstripe.dependencies:Subject" sourceConnections="//@layers.0/@shapes.2/@targetConnections.0" wasLayouting="true" externalId="DEVICE.ifm_base_ios" kind="//@kinds.0" master="true" loaded="true">
+      <location x="30" y="30"/>
+      <size width="200" height="80"/>
+      <style backgroundColor="16777182" foregroundColor="9671466"/>
+      <targetConnections source="//@layers.0/@shapes.4" target="//@layers.0/@shapes.0"/>
+      <targetConnections source="//@layers.0/@shapes.1" target="//@layers.0/@shapes.0"/>
+      <targetConnections source="//@layers.0/@shapes.2" target="//@layers.0/@shapes.0"/>
+      <targetConnections source="//@layers.0/@shapes.3" target="//@layers.0/@shapes.0"/>
+    </shapes>
+    <shapes xsi:type="org.eclipse.tigerstripe.dependencies:Subject" sourceConnections="//@layers.0/@shapes.0/@targetConnections.1" wasLayouting="true" externalId="FEATURE.feature_performance_base_memory" kind="//@kinds.1">
+      <location x="10" y="135"/>
+      <size width="200" height="80"/>
+      <style backgroundColor="16777182" foregroundColor="9671466"/>
+    </shapes>
+    <shapes xsi:type="org.eclipse.tigerstripe.dependencies:Subject" sourceConnections="//@layers.0/@shapes.0/@targetConnections.2" wasLayouting="true" externalId="DEVICE.generic_profile" kind="//@kinds.0">
+      <location x="10" y="450"/>
+      <size width="200" height="80"/>
+      <style backgroundColor="16777182" foregroundColor="9671466"/>
+      <targetConnections source="//@layers.0/@shapes.0" target="//@layers.0/@shapes.2"/>
+    </shapes>
+    <shapes xsi:type="org.eclipse.tigerstripe.dependencies:Subject" sourceConnections="//@layers.0/@shapes.0/@targetConnections.3" wasLayouting="true" externalId="FEATURE.feature_performance_base_interface" kind="//@kinds.1">
+      <location x="235" y="135"/>
+      <size width="200" height="80"/>
+      <style backgroundColor="16777182" foregroundColor="9671466"/>
+    </shapes>
+    <shapes xsi:type="org.eclipse.tigerstripe.dependencies:Subject" sourceConnections="//@layers.0/@shapes.0/@targetConnections.0" wasLayouting="true" externalId="FEATURE.feature_performance_base_cpu" kind="//@kinds.1">
+      <location x="10" y="240"/>
+      <size width="200" height="80"/>
+      <style backgroundColor="16777182" foregroundColor="9671466"/>
+    </shapes>
+    <shapes xsi:type="org.eclipse.tigerstripe.dependencies:Subject" wasLayouting="true" externalId="DEVICE.autonomousAP-Base" kind="//@kinds.0">
+      <location x="685" y="345"/>
+      <size width="200" height="80"/>
+      <style backgroundColor="16777182" foregroundColor="9671466"/>
+    </shapes>
+    <shapes xsi:type="org.eclipse.tigerstripe.dependencies:Subject" wasLayouting="true" externalId="DEVICE.asr" kind="//@kinds.0">
+      <location x="460" y="345"/>
+      <size width="200" height="80"/>
+      <style backgroundColor="16777182" foregroundColor="9671466"/>
+    </shapes>
+    <shapes xsi:type="org.eclipse.tigerstripe.dependencies:Subject" wasLayouting="true" externalId="DEVICE.cat2k" kind="//@kinds.0">
+      <location x="1135" y="345"/>
+      <size width="200" height="80"/>
+      <style backgroundColor="16777182" foregroundColor="9671466"/>
+    </shapes>
+    <shapes xsi:type="org.eclipse.tigerstripe.dependencies:Subject" wasLayouting="true" externalId="DEVICE.ISR" kind="//@kinds.0">
+      <location x="235" y="345"/>
+      <size width="200" height="80"/>
+      <style backgroundColor="16777182" foregroundColor="9671466"/>
+    </shapes>
+    <shapes xsi:type="org.eclipse.tigerstripe.dependencies:Subject" wasLayouting="true" externalId="DEVICE.cat3k" kind="//@kinds.0">
+      <location x="10" y="345"/>
+      <size width="200" height="80"/>
+      <style backgroundColor="16777182" foregroundColor="9671466"/>
+    </shapes>
+    <shapes xsi:type="org.eclipse.tigerstripe.dependencies:Subject" wasLayouting="true" externalId="DEVICE.cat6k" kind="//@kinds.0">
+      <location x="910" y="345"/>
+      <size width="200" height="80"/>
+      <style backgroundColor="16777182" foregroundColor="9671466"/>
+    </shapes>
+  </layers>
+  <layers id="FEATURE.feature_performance_base_cpu">
+    <shapes xsi:type="org.eclipse.tigerstripe.dependencies:Subject" externalId="FEATURE.feature_performance_base_cpu" kind="//@kinds.1" master="true" loaded="true">
+      <location/>
+      <size width="200" height="80"/>
+      <style backgroundColor="16777182" foregroundColor="9671466"/>
+    </shapes>
+    <shapes xsi:type="org.eclipse.tigerstripe.dependencies:Subject" externalId="FEATURE.CPU" kind="//@kinds.1">
+      <location/>
+      <size width="200" height="80"/>
+      <style backgroundColor="16777182" foregroundColor="9671466"/>
+    </shapes>
+  </layers>
+  <layers id="FEATURE.feature_performance_base_memory">
+    <shapes xsi:type="org.eclipse.tigerstripe.dependencies:Subject" externalId="FEATURE.feature_performance_base_memory" kind="//@kinds.1" master="true" loaded="true">
+      <location/>
+      <size width="200" height="80"/>
+      <style backgroundColor="16777182" foregroundColor="9671466"/>
+    </shapes>
+    <shapes xsi:type="org.eclipse.tigerstripe.dependencies:Subject" externalId="FEATURE.MEMORY" kind="//@kinds.1">
+      <location/>
+      <size width="200" height="80"/>
+      <style backgroundColor="16777182" foregroundColor="9671466"/>
+    </shapes>
+  </layers>
+  <layers id="DEVICE.generic_profile">
+    <shapes xsi:type="org.eclipse.tigerstripe.dependencies:Subject" sourceConnections="//@layers.3/@shapes.1/@targetConnections.0" externalId="DEVICE.generic_profile" kind="//@kinds.0" master="true" loaded="true">
+      <location/>
+      <size width="200" height="80"/>
+      <style backgroundColor="16777182" foregroundColor="9671466"/>
+      <targetConnections source="//@layers.3/@shapes.1" target="//@layers.3/@shapes.0"/>
+    </shapes>
+    <shapes xsi:type="org.eclipse.tigerstripe.dependencies:Subject" sourceConnections="//@layers.3/@shapes.0/@targetConnections.0" externalId="DEVICE.ifm_base_ios" kind="//@kinds.0">
+      <location/>
+      <size width="200" height="80"/>
+      <style backgroundColor="16777182" foregroundColor="9671466"/>
+      <targetConnections source="//@layers.3/@shapes.0" target="//@layers.3/@shapes.1"/>
+    </shapes>
+  </layers>
+  <layers id="FEATURE.feature_performance_base_interface">
+    <shapes xsi:type="org.eclipse.tigerstripe.dependencies:Subject" externalId="FEATURE.feature_performance_base_interface" kind="//@kinds.1" master="true" loaded="true">
+      <location/>
+      <size width="200" height="80"/>
+      <style backgroundColor="16777182" foregroundColor="9671466"/>
+    </shapes>
+    <shapes xsi:type="org.eclipse.tigerstripe.dependencies:Subject" externalId="FEATURE.INTERFACE" kind="//@kinds.1">
+      <location/>
+      <size width="200" height="80"/>
+      <style backgroundColor="16777182" foregroundColor="9671466"/>
+    </shapes>
+  </layers>
+</org.eclipse.tigerstripe.dependencies:Diagram>

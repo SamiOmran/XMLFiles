@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><!--Copyright (c) 2010 by Cisco Systems, Inc. All rights reserved.--><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<parent>
+		<groupId>com.cisco.ifm</groupId>
+		<artifactId>ifm_device_profiles</artifactId>
+		<version>3.860.7-SNAPSHOT</version>
+	</parent>	
+	<modelVersion>4.0.0</modelVersion>
+  <groupId>com.cisco.ifm.deviceProfile</groupId>
+  <artifactId>ISR_extension</artifactId>
+  <version>3.860.7-SNAPSHOT</version>
+  <packaging>dar</packaging>
+  <scm>
+    <connection>scm:svn:https://wwwin-svn-sjc.cisco.com/eng/ifm/trunk/device_packages/ifm_device_profiles/ISR_extension</connection>
+    <developerConnection>scm:svn:https://wwwin-svn-sjc.cisco.com/eng/ifm/trunk/device_packages/ifm_device_profiles/ISR_extension</developerConnection>
+    <url>https://wwwin-svn-sjc.cisco.com/eng/ifm/trunk/device_packages/ifm_device_profiles/ISR_extension</url>
+    <tag>device_packages-3.851.7-SNAPSHOT</tag>
+  </scm>
+  <ciManagement>
+    <system>Hudson</system>
+    <url>https://sjc-nmtgci-01.cisco.com:9081/job/</url>
+  </ciManagement>
+  <dependencies>
+  	<dependency>
+  		<groupId>com.cisco.ifm.feature</groupId>
+  		<artifactId>feature_ContainerKwaas</artifactId>
+  		<version>${project.version}</version>
+  		<type>feature</type>
+  	</dependency>
+  </dependencies><distributionManagement />
+  <properties>
+    <sdkVersion>0.8.1.201207070003</sdkVersion>
+    <formatVersion>2</formatVersion>
+  </properties>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>com.cisco.xmp.sdk</groupId>
+        <artifactId>xmp-maven-dar-plugin</artifactId>
+        <extensions>true</extensions>
+      </plugin>
+    </plugins>
+  </build>
+</project>

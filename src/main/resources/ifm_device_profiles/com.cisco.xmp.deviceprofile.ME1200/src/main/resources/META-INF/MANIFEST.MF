@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Created-By: XMP SDK 1.0.0.201610251854
+Name: com.cisco.xmp.deviceprofile.ME1200

@@ -1,0 +1,92 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.cisco.ifm</groupId>
+	<artifactId>stargate_device_profiles</artifactId>
+	<version>3.850.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<description>agregator for device profiles</description>
+	<dependencies />
+
+	<build>
+
+		<plugins>
+			<plugin>
+				<groupId>com.cisco.xmp.sdk</groupId>
+				<artifactId>xmp-maven-dar-plugin</artifactId>
+				<version>1.0.17</version>
+				<configuration>
+				<failOnError>false</failOnError>
+					<createSDU>true</createSDU>
+				</configuration>
+				<extensions>true</extensions>
+			</plugin>
+
+			<plugin>
+				<artifactId>maven-enforcer-plugin</artifactId>
+				<dependencies>
+					<dependency>
+						<groupId>com.cisco.nmtgre</groupId>
+						<artifactId>release-rules</artifactId>
+						<version>1.0.2</version>
+					</dependency>
+				</dependencies>
+				<executions>
+					<execution>
+						<id>enforcer-always</id>
+						<phase>validate</phase>
+						<goals>
+							<goal>enforce</goal>
+						</goals>
+						<configuration>
+							<fail>${xmp.enforcer.fail}</fail>
+							<rules>
+								<!-- no snapshots allowed during release version builds -->
+								<requireReleaseDeps>
+									<message>No Snapshots Allowed During Release!</message>
+									<onlyWhenRelease>true</onlyWhenRelease>
+								</requireReleaseDeps>
+							</rules>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+	<properties>
+		<release.commit.comment>${env.SVN_COMMIT_COMMENT}</release.commit.comment>
+		<release.commit.user>${env.SVN_COMMIT_USER}</release.commit.user>
+		<release.settings.file>${env.M2_HOME}/conf/ifm-release-only-settings.xml</release.settings.file>
+		<connection>scm:git:ssh://git@bitbucket-eng-sjc2.cisco.com:7999/cvgpi/device_packages_ifm.git</connection>
+		<pi.ifm.version>[3.0.68, 3.0.999)</pi.ifm.version>
+	</properties>
+
+
+
+	<profiles>
+		<profile>
+			<id>release-profile</id>
+			<build>
+				<plugins>
+					<plugin>
+						<artifactId>maven-release-plugin</artifactId>
+						<version>2.0-beta-8</version>
+						<configuration>
+							<scmCommentPrefix>${release.commit.comment}
+								[maven-release-plugin]</scmCommentPrefix>
+							<preparationGoals>-s ${release.settings.file} clean install
+								-Dmaven.test.skip=true</preparationGoals>
+							<tagBase>${release.tag.base}</tagBase>
+							<goals>-s ${release.settings.file} deploy -Dmaven.test.skip=true</goals>
+							<username>${release.commit.user}</username>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+
+	<modules>
+		<module>com.cisco.ifm.deviceprofile.apic-em/xmpdevice.xml</module>
+	</modules>
+</project>

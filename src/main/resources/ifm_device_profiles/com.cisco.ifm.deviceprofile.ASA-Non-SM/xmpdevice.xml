@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.cisco.ifm</groupId>
+    <artifactId>ifm_device_profiles</artifactId>
+    <version>3.860.7-SNAPSHOT</version>
+  </parent>
+  <groupId>com.cisco.ifm.deviceprofile</groupId>
+  <artifactId>ASA-Non-SM</artifactId>
+  <packaging>dar</packaging>
+  <ciManagement>
+    <system />
+    <url />
+  </ciManagement>
+  <properties>
+    <formatVersion>2</formatVersion>
+    <sdkVersion>1.2.0.201711180014</sdkVersion>
+  </properties>
+  <dependencies>
+    <dependency>
+      <groupId>com.cisco.ifm.deviceprofile</groupId>
+      <artifactId>ASAv</artifactId>
+      <version>${project.version}</version>
+      <type>dar</type>
+      <exclusions>
+        <exclusion>
+          <artifactId>feature_verifyRecommendation_asav</artifactId>
+          <groupId>com.cisco.ifm.feature</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>feature_copyVlanFromDevice_cids</artifactId>
+          <groupId>com.cisco.ifm.feature</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>com.cisco.ifm.feature</groupId>
+      <artifactId>feature_processConfig_IOS</artifactId>
+      <version>${project.version}</version>
+      <type>feature</type>
+    </dependency>
+  </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>com.cisco.xmp.sdk</groupId>
+        <artifactId>xmp-maven-dar-plugin</artifactId>
+        <extensions>true</extensions>
+      </plugin>
+    </plugins>
+  </build>
+</project>

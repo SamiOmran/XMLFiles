@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><rules formatVersion="1" sdkVersion="1.0.391">
+    <action name="getCLI">
+        <inputs>
+            <mandatory name="paramMap"/>
+        </inputs>
+        <outputXSD/>
+        <documentation/>
+        <rule>
+            <test>
+                <software>IOS</software>
+            </test>
+            <handler type="com.cisco.nm.pal.customhandler.VelocityHandler">
+                <parameter name="velocityHandler.template">#set($serverAddress = $paramMap.get("serverAddress"))
+
+ntp server $serverAddress
+exit</parameter>
+                <parameter name="handler_output">OUTPUTS</parameter>
+            </handler>
+        </rule>
+    </action>
+</rules>

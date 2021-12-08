@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Name: com.cisco.ifm.deviceprofile.SG220
+Created-By: XMP SDK 1.2.12.v20190404-1600
+

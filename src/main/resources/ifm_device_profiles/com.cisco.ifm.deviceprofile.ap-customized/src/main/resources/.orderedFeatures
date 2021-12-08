@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><dpRuntimeInfo xmlns:ext="http://com.cisco.xmp.deviceProfileExternalParameters" xmlns:param="http://com.cisco.xmp.deviceProfileSelectionParameters" formatVersion="2" sdkVersion="0.8.2.201308271745">
+    <orderedFeatureList>
+        <dependency override="replace">
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_runningConfig_cids</artifactId>
+            <type>Unknown(feature)</type>
+            <dependency override="replacee">
+                <groupId>com.cisco.ifm.feature</groupId>
+                <artifactId>feature_runningConfig_IOS</artifactId>
+                <type>feature</type>
+            </dependency>
+        </dependency>
+        <dependency override="replace">
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_startupConfig_cids</artifactId>
+            <type>Unknown(feature)</type>
+            <dependency override="replacee">
+                <groupId>com.cisco.ifm.feature</groupId>
+                <artifactId>feature_startupConfig_IOS</artifactId>
+                <type>feature</type>
+            </dependency>
+        </dependency>
+    </orderedFeatureList>
+    <configuration>
+        <param:software param:operation="equal">IOS</param:software>
+        <param:productType>default</param:productType>
+        <param:productType>268438201</param:productType>
+        <param:productType>277646805</param:productType>
+        <param:productType>999990427</param:productType>
+        <param:productType>282439881</param:productType>
+        <param:productType>277026213</param:productType>
+        <param:productType>999990277</param:productType>
+        <param:productType>280237322</param:productType>
+        <param:productType>281235915</param:productType>
+        <param:productType>999990278</param:productType>
+        <param:productType>999990800</param:productType>
+        <param:productType>999990931</param:productType>
+        <param:productType>268438192</param:productType>
+        <ext:extApplicationBeanName>undefined</ext:extApplicationBeanName>
+    </configuration>
+</dpRuntimeInfo>

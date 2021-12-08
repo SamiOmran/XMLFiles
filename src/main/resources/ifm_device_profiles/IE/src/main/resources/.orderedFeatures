@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><dpRuntimeInfo xmlns:ext="http://com.cisco.xmp.deviceProfileExternalParameters" xmlns:param="http://com.cisco.xmp.deviceProfileSelectionParameters" formatVersion="2" sdkVersion="0.8.0.201204191933">
+    <orderedFeatureList/>
+    <configuration>
+        <param:software param:operation="equal">IOS</param:software>
+        <param:productSeries>282082952</param:productSeries>
+        <param:productSeries>282250552</param:productSeries>
+        <param:productSeries>283454831</param:productSeries>
+        <param:softwareVersion param:operation="greaterAndEqual">12.2</param:softwareVersion>
+    </configuration>
+</dpRuntimeInfo>

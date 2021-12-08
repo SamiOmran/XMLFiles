@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Created-By: XMP SDK 0.9.1.201506292018
+Name: com.cisco.ifm.deviceprofile.evenbased_OPTICAL_XR

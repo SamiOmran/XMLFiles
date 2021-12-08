@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><rules formatVersion="1" sdkVersion="1.0.373">
+    <action name="pushToDevice">
+        <inputs>
+            <mandatory name="configCLILines"/>
+        </inputs>
+        <outputXSD/>
+        <documentation/>
+        <rule>
+            <test>
+                <software>IOS</software>
+            </test>
+            <handler type="com.cisco.nm.pal.customhandler.VelocityHandler">
+                <parameter name="velocityHandler.template">
+&lt;configCmdConv&gt;&lt;cliConv formatVersion="2"&gt;
+	&lt;command&gt;
+		&lt;send&gt;config t&lt;/send&gt;
+		&lt;modechange&gt;true&lt;/modechange&gt;
+	&lt;/command&gt;
+	
+	#foreach ( $configLine in $configCLILines )
+	&lt;command&gt;
+		&lt;send&gt;$configLine&lt;/send&gt;
+		&lt;prompt&gt;(.*#|:)&lt;/prompt&gt;
+		&lt;error&gt;.*Invalid.*&lt;/error&gt;
+	&lt;/command&gt;
+	
+	#end
+&lt;/cliConv&gt;&lt;/configCmdConv&gt;</parameter>
+            </handler>
+            <handler type="com.cisco.nm.pal.customhandler.cli.CLIHandler">
+                <parameter name="handler_output">OUTPUTS</parameter>
+            </handler>
+        </rule>
+    </action>
+</rules>

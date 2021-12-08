@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><dpRuntimeInfo xmlns:ext="http://com.cisco.xmp.deviceProfileExternalParameters" xmlns:param="http://com.cisco.xmp.deviceProfileSelectionParameters" formatVersion="2" sdkVersion="0.8.2.201408111930">
+    <orderedFeatureList>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>eem_module</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.srtg.feature</groupId>
+            <artifactId>srtg-ipsla</artifactId>
+            <type>feature</type>
+        </dependency>
+    </orderedFeatureList>
+    <configuration>
+        <param:software param:operation="equal">IOS</param:software>
+        <param:productSeries>281716314</param:productSeries>
+        <param:productSeries>282770989</param:productSeries>
+        <param:productSeries>282770988</param:productSeries>
+    </configuration>
+</dpRuntimeInfo>

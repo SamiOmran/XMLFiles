@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><dpRuntimeInfo xmlns:ext="http://com.cisco.xmp.deviceProfileExternalParameters" xmlns:param="http://com.cisco.xmp.deviceProfileSelectionParameters" formatVersion="2" sdkVersion="0.8.2.201311191236">
+    <orderedFeatureList>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>physicalresource_ucs_c_series</artifactId>
+            <type>feature</type>
+        </dependency>
+    </orderedFeatureList>
+    <configuration>
+
+		<param:productType>284262049</param:productType>
+        <param:productType>284259957</param:productType>
+		<param:productType>286280198</param:productType>
+		<param:productType>286280187</param:productType>
+		<param:productType>286280220</param:productType>
+		<param:productType>283760734</param:productType>
+		<param:productType>284339968</param:productType>
+		<param:productType>284340345</param:productType>
+		<param:productType>286231776</param:productType>
+		<param:productType>286281321</param:productType>
+		<param:productType>286281332</param:productType>
+		<param:productType>286231777</param:productType>
+		<param:productType>286291240</param:productType>
+		<param:productType>286291251</param:productType>
+		
+ </configuration>
+</dpRuntimeInfo>

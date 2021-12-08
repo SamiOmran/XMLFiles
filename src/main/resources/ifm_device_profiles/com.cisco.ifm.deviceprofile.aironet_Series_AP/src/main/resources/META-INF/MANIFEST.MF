@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Created-By: XMP SDK 1.2.0.201711180014
+Name: com.cisco.ifm.deviceprofile.aironet_Series_AP

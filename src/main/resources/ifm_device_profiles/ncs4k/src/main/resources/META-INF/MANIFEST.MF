@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Name: com.cisco.ifm.deviceprofile.ncs4k
+Created-By: XMP SDK 0.9.0.201504150624
+

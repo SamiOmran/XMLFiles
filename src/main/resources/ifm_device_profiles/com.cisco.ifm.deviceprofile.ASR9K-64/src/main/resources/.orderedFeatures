@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><dpRuntimeInfo xmlns:ext="http://com.cisco.xmp.deviceProfileExternalParameters" xmlns:param="http://com.cisco.xmp.deviceProfileSelectionParameters" formatVersion="2" sdkVersion="0.9.1.201603291549">
+    <orderedFeatureList>
+        <dependency override="replace">
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_copyImageToDevice_IOSXR</artifactId>
+            <type>Feature</type>
+            <dependency override="replacee">
+                <groupId>com.cisco.ifm.feature</groupId>
+                <artifactId>feature_copyImageToDevice_NCS_IOSXR</artifactId>
+                <type>feature</type>
+            </dependency>
+        </dependency>
+        <dependency override="replace">
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_activateDevice_XR</artifactId>
+            <type>Feature</type>
+            <dependency override="replacee">
+                <groupId>com.cisco.ifm.feature</groupId>
+                <artifactId>feature_activateDevice_NCS4K</artifactId>
+                <type>feature</type>
+            </dependency>
+        </dependency>
+        <dependency override="replace">
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_recommendStorage_IOS_XR</artifactId>
+            <type>Feature</type>
+            <dependency override="replacee">
+                <groupId>com.cisco.ifm.feature</groupId>
+                <artifactId>feature_recommendStorage_NCS4K</artifactId>
+                <type>feature</type>
+            </dependency>
+        </dependency>
+        <dependency override="replace">
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_copyAdminConfigFromDevice_IOSXR</artifactId>
+            <type>Feature</type>
+            <dependency override="replacee">
+                <groupId>com.cisco.ifm.feature</groupId>
+                <artifactId>feature_copyAdminConfigFromDevice_NCS4K</artifactId>
+                <type>feature</type>
+            </dependency>
+        </dependency>
+        <dependency override="replace">
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_deployAdminRunningConfig_IOSXR</artifactId>
+            <type>Feature</type>
+            <dependency override="replacee">
+                <groupId>com.cisco.ifm.feature</groupId>
+                <artifactId>feature_deployAdminConfig_ncs55xx</artifactId>
+                <type>feature</type>
+            </dependency>
+        </dependency>
+        <dependency override="replace">
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_upgradeAnalysis_IOSXR</artifactId>
+            <type>Feature</type>
+            <dependency override="replacee">
+                <groupId>com.cisco.ifm.feature</groupId>
+                <artifactId>feature_upgradeAnalysis_Katana</artifactId>
+                <type>feature</type>
+            </dependency>
+        </dependency>
+    </orderedFeatureList>
+    <configuration>
+        <param:productSeries>282267600</param:productSeries>
+		<param:architecture param:operation="equal">64-bit</param:architecture>
+    </configuration>
+</dpRuntimeInfo>

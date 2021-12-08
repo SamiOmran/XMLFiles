@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.cisco.ifm</groupId>
+    <artifactId>ifm_device_profiles</artifactId>
+    <version>3.860.7-SNAPSHOT</version>
+  </parent>
+  <groupId>com.cisco.ifm.deviceprofile</groupId>
+  <artifactId>C900XE</artifactId>
+  <version>3.860.7-SNAPSHOT</version>
+  <packaging>dar</packaging>
+  <dependencies>
+    <dependency>
+      <groupId>com.cisco.ifm.feature</groupId>
+      <artifactId>feature_performance_base1_envtemp</artifactId>
+      <version>${project.version}</version>
+      <type>feature</type>
+    </dependency>
+    <dependency>
+      <groupId>com.cisco.ifm.deviceprofile</groupId>
+      <artifactId>C900</artifactId>
+      <version>${project.version}</version>
+      <type>dar</type>
+      <exclusions>
+        <exclusion>
+          <artifactId>feature_performance_base_envtemp</artifactId>
+          <groupId>com.cisco.ifm.feature</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+  </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>com.cisco.maven.plugins</groupId>
+        <artifactId>device-package-maven-plugin</artifactId>
+        <extensions>true</extensions>
+      </plugin>
+    </plugins>
+  </build>
+</project>

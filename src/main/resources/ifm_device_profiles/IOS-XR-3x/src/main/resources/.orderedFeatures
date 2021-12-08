@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><dpRuntimeInfo xmlns:ext="http://com.cisco.xmp.deviceProfileExternalParameters" xmlns:param="http://com.cisco.xmp.deviceProfileSelectionParameters" formatVersion="2" sdkVersion="0.8.2.201403202131">
+    <orderedFeatureList>
+        <dependency override="replace">
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_performance_base_memory</artifactId>
+            <type>Feature</type>
+            <dependency override="replacee">
+                <groupId>com.cisco.ifm.feature</groupId>
+                <artifactId>feature_performance_iosxr3x_memory</artifactId>
+                <type>feature</type>
+            </dependency>
+        </dependency>
+    </orderedFeatureList>
+    <configuration>
+        <param:software param:isRegex="true" param:operation="equal">.*IOS XR.*</param:software>
+        <param:softwareVersion param:operation="greaterAndEqual">3.0</param:softwareVersion>
+    </configuration>
+</dpRuntimeInfo>

@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Created-By: XMP SDK 1.2.7.v20180228-1730
+Name: com.cisco.xmp.deviceprofile.GenericDeviceProfile
+

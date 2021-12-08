@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Created-By: XMP SDK 0.9.1.201505261727
+Name: com.cisco.xmp.deviceprofile.SmartInventoryDetail

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><dpRuntimeInfo xmlns:ext="http://com.cisco.xmp.deviceProfileExternalParameters" xmlns:param="http://com.cisco.xmp.deviceProfileSelectionParameters" formatVersion="3" sdkVersion="1.2.13.v20190827-2151">
+    <orderedFeatureList>
+        <dependency override="replace">
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_copyImageFromDevice_asr1k</artifactId>
+            <dependency override="replacee">
+                <groupId>com.cisco.ifm.feature</groupId>
+                <artifactId>feature_copyImageFromDevice_ncs42xx</artifactId>
+                <type>feature</type>
+            </dependency>
+        </dependency>
+        <dependency override="replace">
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_copyImageToDevice_ASR903</artifactId>
+            <dependency override="replacee">
+                <groupId>com.cisco.ifm.feature</groupId>
+                <artifactId>feature_copyImageToDevice_NCS42xx</artifactId>
+                <type>feature</type>
+            </dependency>
+        </dependency>
+        <dependency override="replace">
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_ifm_swim_capability</artifactId>
+            <dependency override="replacee">
+                <groupId>com.cisco.ifm.feature</groupId>
+                <artifactId>feature_ifm_swim_capability_NCS42XX</artifactId>
+                <type>feature</type>
+            </dependency>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_configAnalyser_ios</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_standalone_upgrade_cbr8</artifactId>
+            <type>feature</type>
+        </dependency>
+    </orderedFeatureList>
+    <configuration>
+        <param:sysObjectId param:operator="or">
+            <param:value param:operation="equal">1.3.6.1.4.1.9.1.2327</param:value>
+            <param:value param:operation="equal">1.3.6.1.4.1.9.1.2328</param:value>
+            <param:value param:operation="equal">1.3.6.1.4.1.9.1.2329</param:value>
+            <param:value param:operation="equal">1.3.6.1.4.1.9.1.2239</param:value>
+            <param:value param:operation="equal">1.3.6.1.4.1.9.1.2141</param:value>
+            <param:value param:operation="equal">1.3.6.1.4.1.9.1.2605</param:value>
+        </param:sysObjectId>
+    </configuration>
+</dpRuntimeInfo>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="ASCII"?>
+<org.eclipse.tigerstripe.dependencies:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:org.eclipse.tigerstripe.dependencies="http:///org/eclipse/tigerstripe/dependencies.ecore" currentLayer="//@layers.0">
+  <kinds id="DEVICE">
+    <style backgroundColor="14221270" foregroundColor="12247480"/>
+  </kinds>
+  <kinds id="FEATURE">
+    <style backgroundColor="16777182" foregroundColor="9671466"/>
+  </kinds>
+  <layers id="DEVICE.com.cisco.ifm.deviceprofile.ncs2k">
+    <shapes xsi:type="org.eclipse.tigerstripe.dependencies:Subject" wasLayouting="true" externalId="DEVICE.com.cisco.ifm.deviceprofile.ncs2k" kind="//@kinds.0" master="true" loaded="true">
+      <location x="30" y="30"/>
+      <size width="200" height="80"/>
+      <style backgroundColor="16777182" foregroundColor="9671466"/>
+      <targetConnections source="//@layers.0/@shapes.12" target="//@layers.0/@shapes.0"/>
+      <targetConnections source="//@layers.0/@shapes.5" target="//@layers.0/@shapes.0"/>
+      <targetConnections source="//@layers.0/@shapes.13" target="//@layers.0/@shapes.0"/>
+      <targetConnections source="//@layers.0/@shapes.7" target="//@layers.0/@shapes.0"/>
+      <targetConnections source="//@layers.0/@shapes.8" target="//@layers.0/@shapes.0"/>
+      <targetConnections source="//@layers.0/@shapes.4" target="//@layers.0/@shapes.0"/>
+      <targetConnections source="//@layers.0/@shapes.1" target="//@layers.0/@shapes.0"/>
+      <targetConnections source="//@layers.0/@shapes.11" target="//@layers.0/@shapes.0"/>
+      <targetConnections source="//@layers.0/@shapes.2" target="//@layers.0/@shapes.0"/>
+      <targetConnections source="//@layers.0/@shapes.3" target="//@layers.0/@shapes.0"/>
+      <targetConnections source="//@layers.0/@shapes.6" target="//@layers.0/@shapes.0"/>
+      <targetConnections source="//@layers.0/@shapes.10" target="//@layers.0/@shapes.0"/>
+      <targetConnections source="//@layers.0/@shapes.9" target="//@layers.0/@shapes.0"/>
+    </shapes>
+    <shapes xsi:type="org.eclipse.tigerstripe.dependencies:Subject" sourceConnections="//@layers.0/@shapes.0/@targetConnections.6" wasLayouting="true" externalId="FEATURE.com.cisco.ifm.feature.feature_copyImageToDevice_NCS2K" kind="//@kinds.1">
+      <location x="1810" y="135"/>
+      <size width="200" height="80"/>
+      <style backgroundColor="16777182" foregroundColor="9671466"/>
+    </shapes>
+    <shapes xsi:type="org.eclipse.tigerstripe.dependencies:Subject" sourceConnections="//@layers.0/@shapes.0/@targetConnections.8" wasLayouting="true" externalId="FEATURE.com.cisco.ifm.feature.feature_runningPackages_ONS" kind="//@kinds.1">
+      <location x="685" y="135"/>
+      <size width="200" height="80"/>
+      <style backgroundColor="16777182" foregroundColor="9671466"/>
+    </shapes>
+    <shapes xsi:type="org.eclipse.tigerstripe.dependencies:Subject" sourceConnections="//@layers.0/@shapes.0/@targetConnections.9" wasLayouting="true" externalId="FEATURE.com.cisco.xmp.feature.TL1.physical_inventory" kind="//@kinds.1">
+      <location x="1585" y="135"/>
+      <size width="200" height="80"/>
+      <style backgroundColor="16777182" foregroundColor="9671466"/>
+    </shapes>
+    <shapes xsi:type="org.eclipse.tigerstripe.dependencies:Subject" sourceConnections="//@layers.0/@shapes.0/@targetConnections.5" wasLayouting="true" externalId="FEATURE.com.cisco.ifm.feature.feature_activateOrRevert_NCS2K" kind="//@kinds.1">
+      <location x="910" y="135"/>
+      <size width="200" height="80"/>
+      <style backgroundColor="16777182" foregroundColor="9671466"/>
+    </shapes>
+    <shapes xsi:type="org.eclipse.tigerstripe.dependencies:Subject" sourceConnections="//@layers.0/@shapes.0/@targetConnections.1" wasLayouting="true" externalId="FEATURE.com.cisco.ifm.feature.feature_ImageVersionCompare_ncs2k" kind="//@kinds.1">
+      <location x="10" y="555"/>
+      <size width="200" height="80"/>
+      <style backgroundColor="16777182" foregroundColor="9671466"/>
+    </shapes>
+    <shapes xsi:type="org.eclipse.tigerstripe.dependencies:Subject" sourceConnections="//@layers.0/@shapes.0/@targetConnections.10" wasLayouting="true" externalId="FEATURE.com.cisco.ifm.feature.feature_deployDATABASEToDevice_ons" kind="//@kinds.1">
+      <location x="460" y="135"/>
+      <size width="200" height="80"/>
+      <style backgroundColor="16777182" foregroundColor="9671466"/>
+    </shapes>
+    <shapes xsi:type="org.eclipse.tigerstripe.dependencies:Subject" sourceConnections="//@layers.0/@shapes.0/@targetConnections.3" wasLayouting="true" externalId="FEATURE.com.cisco.ifm.feature.feature_recommendStorage_ONS" kind="//@kinds.1">
+      <location x="10" y="135"/>
+      <size width="200" height="80"/>
+      <style backgroundColor="16777182" foregroundColor="9671466"/>
+    </shapes>
+    <shapes xsi:type="org.eclipse.tigerstripe.dependencies:Subject" sourceConnections="//@layers.0/@shapes.0/@targetConnections.4" wasLayouting="true" externalId="FEATURE.com.cisco.ifm.feature.feature_verifyRecommendation_ONS" kind="//@kinds.1">
+      <location x="10" y="240"/>
+      <size width="200" height="80"/>
+      <style backgroundColor="16777182" foregroundColor="9671466"/>
+    </shapes>
+    <shapes xsi:type="org.eclipse.tigerstripe.dependencies:Subject" sourceConnections="//@layers.0/@shapes.0/@targetConnections.12" wasLayouting="true" externalId="FEATURE.com.cisco.ifm.feature.feature_ConfigArchive_Capability_ONS" kind="//@kinds.1">
+      <location x="10" y="345"/>
+      <size width="200" height="80"/>
+      <style backgroundColor="16777182" foregroundColor="9671466"/>
+    </shapes>
+    <shapes xsi:type="org.eclipse.tigerstripe.dependencies:Subject" sourceConnections="//@layers.0/@shapes.0/@targetConnections.11" wasLayouting="true" externalId="FEATURE.com.cisco.ifm.feature.feature_recommendSoftware_ONS" kind="//@kinds.1">
+      <location x="1135" y="135"/>
+      <size width="200" height="80"/>
+      <style backgroundColor="16777182" foregroundColor="9671466"/>
+    </shapes>
+    <shapes xsi:type="org.eclipse.tigerstripe.dependencies:Subject" sourceConnections="//@layers.0/@shapes.0/@targetConnections.7" wasLayouting="true" externalId="FEATURE.com.cisco.ifm.feature.feature_image_ONS" kind="//@kinds.1">
+      <location x="10" y="450"/>
+      <size width="200" height="80"/>
+      <style backgroundColor="16777182" foregroundColor="9671466"/>
+    </shapes>
+    <shapes xsi:type="org.eclipse.tigerstripe.dependencies:Subject" sourceConnections="//@layers.0/@shapes.0/@targetConnections.0" wasLayouting="true" externalId="FEATURE.com.cisco.ifm.feature.feature_copyDATABASEFromDevice_ons" kind="//@kinds.1">
+      <location x="2035" y="135"/>
+      <size width="200" height="80"/>
+      <style backgroundColor="16777182" foregroundColor="9671466"/>
+    </shapes>
+    <shapes xsi:type="org.eclipse.tigerstripe.dependencies:Subject" sourceConnections="//@layers.0/@shapes.0/@targetConnections.2" wasLayouting="true" externalId="FEATURE.com.cisco.ifm.feature.feature_ifm_swim_capability_ONS" kind="//@kinds.1">
+      <location x="235" y="345"/>
+      <size width="200" height="80"/>
+      <style backgroundColor="16777182" foregroundColor="9671466"/>
+    </shapes>
+    <shapes xsi:type="org.eclipse.tigerstripe.dependencies:Subject" wasLayouting="true" externalId="FEATURE.com.cisco.ifm.feature.feature_checkActivatoinStatus_ncs2k" kind="//@kinds.1">
+      <location x="10" y="555"/>
+      <size width="200" height="80"/>
+      <style backgroundColor="16777182" foregroundColor="9671466"/>
+    </shapes>
+    <shapes xsi:type="org.eclipse.tigerstripe.dependencies:Subject" wasLayouting="true" externalId="FEATURE.com.cisco.ifm.feature.feature_NgwcVlanGroup" kind="//@kinds.1">
+      <location x="10" y="345"/>
+      <size width="200" height="80"/>
+      <style backgroundColor="16777182" foregroundColor="9671466"/>
+    </shapes>
+    <shapes xsi:type="org.eclipse.tigerstripe.dependencies:Subject" wasLayouting="true" externalId="FEATURE.com.cisco.ifm.feature.feature_ifm_swim_capability" kind="//@kinds.1">
+      <location x="235" y="240"/>
+      <size width="200" height="80"/>
+      <style backgroundColor="16777182" foregroundColor="9671466"/>
+    </shapes>
+    <shapes xsi:type="org.eclipse.tigerstripe.dependencies:Subject" wasLayouting="true" externalId="FEATURE.com.cisco.ifm.feature.feature_ConfigArchive_Capability" kind="//@kinds.1">
+      <location x="1360" y="135"/>
+      <size width="200" height="80"/>
+      <style backgroundColor="16777182" foregroundColor="9671466"/>
+    </shapes>
+    <shapes xsi:type="org.eclipse.tigerstripe.dependencies:Subject" wasLayouting="true" externalId="FEATURE.com.cisco.ifm.feature.feature_installed_image_tl1" kind="//@kinds.1">
+      <location x="2260" y="135"/>
+      <size width="200" height="80"/>
+      <style backgroundColor="16777182" foregroundColor="9671466"/>
+    </shapes>
+  </layers>
+</org.eclipse.tigerstripe.dependencies:Diagram>

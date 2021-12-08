@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><dpRuntimeInfo xmlns:ext="http://com.cisco.xmp.deviceProfileExternalParameters" xmlns:param="http://com.cisco.xmp.deviceProfileSelectionParameters" formatVersion="2" sdkVersion="0.9.1.201603291549">
+    <orderedFeatureList>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_physicalresource</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_image_wae</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_IPinterface</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_etherChannel_wae</artifactId>
+            <type>feature</type>
+        </dependency>
+    </orderedFeatureList>
+    <configuration>
+        <param:sysObjectId param:operation="equal">1.3.6.1.4.1.9.1.987</param:sysObjectId>
+        <param:sysObjectId param:operation="equal">1.3.6.1.4.1.9.1.986</param:sysObjectId>
+        <param:sysObjectId param:operation="equal">1.3.6.1.4.1.9.1.595</param:sysObjectId>
+        <param:sysObjectId param:operation="equal">1.3.6.1.4.1.9.1.681</param:sysObjectId>
+        <param:sysObjectId param:operation="equal">1.3.6.1.4.1.9.1.785</param:sysObjectId>
+        <param:sysObjectId param:operation="equal">1.3.6.1.4.1.9.1.759</param:sysObjectId>
+        <param:sysObjectId param:operation="equal">1.3.6.1.4.1.9.1.776</param:sysObjectId>
+        <param:sysObjectId param:operation="equal">1.3.6.1.4.1.9.1.985</param:sysObjectId>
+        <param:sysObjectId param:operation="equal">1.3.6.1.4.1.9.1.786</param:sysObjectId>
+        <param:sysObjectId param:operation="equal">1.3.6.1.4.1.9.1.757</param:sysObjectId>
+        <param:sysObjectId param:operation="equal">1.3.6.1.4.1.9.1.761</param:sysObjectId>
+        <param:sysObjectId param:operation="equal">1.3.6.1.4.1.9.1.777</param:sysObjectId>
+        <param:sysObjectId param:operation="equal">1.3.6.1.4.1.9.1.957</param:sysObjectId>
+        <param:sysObjectId param:operation="equal">1.3.6.1.4.1.9.1.787</param:sysObjectId>
+        <param:sysObjectId param:operation="equal">1.3.6.1.4.1.9.1.907</param:sysObjectId>
+        <param:sysObjectId param:operation="equal">1.3.6.1.4.1.9.1.908</param:sysObjectId>
+        <param:sysObjectId param:operation="equal">1.3.6.1.4.1.9.1.823</param:sysObjectId>
+        <param:sysObjectId param:operation="equal">1.3.6.1.4.1.9.1.1211</param:sysObjectId>
+        <param:sysObjectId param:operation="equal">1.3.6.1.4.1.9.1.1212</param:sysObjectId>
+        <param:sysObjectId param:operation="equal">1.3.6.1.4.1.9.1.1213</param:sysObjectId>
+        <param:sysObjectId param:operation="equal">1.3.6.1.4.1.9.1.1523</param:sysObjectId>
+        <param:sysObjectId param:operation="equal">1.3.6.1.4.1.9.1.1524</param:sysObjectId>
+        <param:sysObjectId param:operation="equal">1.3.6.1.4.1.9.1.1349</param:sysObjectId>
+        <param:sysObjectId param:operation="equal">1.3.6.1.4.1.9.1.1350</param:sysObjectId>
+        <param:sysObjectId param:operation="equal">1.3.6.1.4.1.9.1.1351</param:sysObjectId>
+        <param:sysObjectId param:operation="equal">1.3.6.1.4.1.9.1.1352</param:sysObjectId>
+        <param:sysObjectId param:operation="equal">1.3.6.1.4.1.9.1.1353</param:sysObjectId>
+        <param:sysObjectId param:operation="equal">1.3.6.1.4.1.9.1.1301</param:sysObjectId>
+        <param:sysObjectId param:operation="equal">1.3.6.1.4.1.9.1.1354</param:sysObjectId>
+        <param:productSeries>280000350</param:productSeries>
+        <param:productSeries>268437743</param:productSeries>
+        <param:productSeries>282791811</param:productSeries>
+        <param:productSeries>282125945</param:productSeries>
+    </configuration>
+</dpRuntimeInfo>

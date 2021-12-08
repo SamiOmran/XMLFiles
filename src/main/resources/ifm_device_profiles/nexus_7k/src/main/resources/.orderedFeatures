@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><dpRuntimeInfo xmlns:ext="http://com.cisco.xmp.deviceProfileExternalParameters" xmlns:param="http://com.cisco.xmp.deviceProfileSelectionParameters" formatVersion="3">
+    <orderedFeatureList>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_startupConfig_Nexus</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_getVDCInfo</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_processConfig_NEXUS</artifactId>
+            <type>feature</type>
+        </dependency>
+    </orderedFeatureList>
+    <configuration>
+        <param:productType param:operator="or">
+            <param:value param:operation="equal">281943928</param:value>
+            <param:value param:operation="equal">282440588</param:value>
+            <param:value param:operation="equal">283748960</param:value>
+            <param:value param:operation="equal">284809080</param:value>
+            <param:value param:operation="equal">284809079</param:value>
+            <param:value param:operation="equal">286120747</param:value>
+            <param:value param:operation="equal">286284485</param:value>
+        </param:productType>
+    </configuration>
+</dpRuntimeInfo>

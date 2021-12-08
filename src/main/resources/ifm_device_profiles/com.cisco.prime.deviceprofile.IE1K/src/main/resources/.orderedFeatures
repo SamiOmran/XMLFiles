@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><dpRuntimeInfo xmlns:ext="http://com.cisco.xmp.deviceProfileExternalParameters" xmlns:param="http://com.cisco.xmp.deviceProfileSelectionParameters" formatVersion="3" sdkVersion="1.2.7.v20180228-1730">
+    <orderedFeatureList>
+        <dependency>
+            <groupId>com.cisco.prime.feature</groupId>
+            <artifactId>ethernetInterface_feature_IE1K</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.prime.feature</groupId>
+            <artifactId>etherChannel_feature_IE1K</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.prime.feature</groupId>
+            <artifactId>vlans_feature_IE1K</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.prime.feature</groupId>
+            <artifactId>ipInterfaces_feature_IE1k</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.prime.feature</groupId>
+            <artifactId>image_feature_IE1K</artifactId>
+            <type>feature</type>
+        </dependency>
+        <dependency>
+            <groupId>com.cisco.prime.feature</groupId>
+            <artifactId>sensor_feature_IE1K</artifactId>
+            <type>feature</type>
+        </dependency>
+    </orderedFeatureList>
+    <configuration>
+        <param:productSeries param:operation="equal">286307836</param:productSeries>
+    </configuration>
+</dpRuntimeInfo>

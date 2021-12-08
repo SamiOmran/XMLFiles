@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Created-By: XMP SDK 1.0.0.201605191424
+Name: com.cisco.ifm.deviceprofile.ncs6k

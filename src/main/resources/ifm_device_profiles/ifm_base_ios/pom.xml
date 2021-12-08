@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Copyright (c) 2010 by Cisco Systems, Inc. All rights reserved.-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+		<groupId>com.cisco.ifm</groupId>
+		<artifactId>ifm_parent_pom</artifactId>
+		<version>3.850.0-SNAPSHOT</version>
+	</parent>
+  <groupId>com.cisco.ifm.deviceProfile</groupId>
+  <artifactId>ifm_base_ios</artifactId>
+  <version>3.850.0-SNAPSHOT</version>
+  <packaging>dar</packaging>
+  <dependencies>
+    <dependency>
+      <groupId>com.cisco.ifm.feature</groupId>
+      <artifactId>feature_performance_base_cpu</artifactId>
+      <version>${project.version}</version>
+      <type>feature</type>
+    </dependency>
+    <dependency>
+      <groupId>com.cisco.ifm.feature</groupId>
+      <artifactId>feature_performance_base_memory</artifactId>
+      <version>${project.version}</version>
+      <type>feature</type>
+    </dependency>
+    <dependency>
+      <groupId>com.cisco.ifm.feature</groupId>
+      <artifactId>feature_performance_base_interface</artifactId>
+      <version>${project.version}</version>
+      <type>feature</type>
+    </dependency>
+    <dependency>
+      <groupId>com.cisco.ifm.deviceProfile</groupId>
+      <artifactId>generic_profile</artifactId>
+      <version>${project.version}</version>
+      <type>dar</type>
+    </dependency>
+  </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>com.cisco.xmp.sdk</groupId>
+        <artifactId>xmp-maven-dar-plugin</artifactId>
+        <version>1.0</version>
+        <extensions>true</extensions>
+        <configuration/>
+      </plugin>
+    </plugins>
+  </build>
+  <properties>
+    <sdkVersion>0.8.0.201104270802</sdkVersion>
+    <formatVersion>2</formatVersion>
+    <jenkins_auto.skip>true</jenkins_auto.skip>
+  </properties>
+</project>

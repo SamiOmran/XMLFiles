@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><dpRuntimeInfo xmlns:ext="http://com.cisco.xmp.deviceProfileExternalParameters" xmlns:param="http://com.cisco.xmp.deviceProfileSelectionParameters" formatVersion="2" sdkVersion="1.0.0.201610251854">
+    <orderedFeatureList>
+        <dependency>
+            <groupId>com.cisco.ifm.feature</groupId>
+            <artifactId>feature_performance_lisp</artifactId>
+            <type>feature</type>
+        </dependency>
+    </orderedFeatureList>
+    <configuration>
+        <param:software param:operator="and">
+            <param:value param:operation="equal">IOS</param:value>
+        </param:software>
+        <param:softwareVariant param:operator="and">
+            <param:value param:operation="equal">XE</param:value>
+        </param:softwareVariant>
+        <param:softwareVersion param:operation="greater">16.2</param:softwareVersion>
+    </configuration>
+</dpRuntimeInfo>

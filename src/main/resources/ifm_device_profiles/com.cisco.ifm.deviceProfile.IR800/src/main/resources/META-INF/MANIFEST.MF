@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Name: com.cisco.ifm.deviceProfile.IR800
+Created-By: XMP SDK 0.9.1.201512241856
+

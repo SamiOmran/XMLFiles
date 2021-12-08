@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.cisco.ifm</groupId>
+    <artifactId>ifm_device_profiles</artifactId>
+    <version>3.860.7-SNAPSHOT</version>
+  </parent>
+  <groupId>com.cisco.ifm.deviceprofile</groupId>
+  <artifactId>Cat9kSVL</artifactId>
+  <packaging>dar</packaging>
+  <description>Profile is for SVL supprting devices . Make sure that the device is compatible with cat9k profile which is the parent of this profile</description>
+  <dependencies>
+    <dependency>
+      <groupId>com.cisco.ifm.deviceprofile</groupId>
+      <artifactId>cat9k</artifactId>
+      <version>${project.version}</version>
+      <type>dar</type>
+      <exclusions>
+        <exclusion>
+          <artifactId>feature_flashdevice</artifactId>
+          <groupId>com.cisco.ifm.feature</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>com.cisco.ifm.feature</groupId>
+      <artifactId>flashDeviceCat9kCLI</artifactId>
+      <version>${project.version}</version>
+      <type>feature</type>
+    </dependency>
+  </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>com.cisco.xmp.sdk</groupId>
+        <artifactId>xmp-maven-dar-plugin</artifactId>
+        <extensions>true</extensions>
+      </plugin>
+    </plugins>
+  </build>
+</project>
