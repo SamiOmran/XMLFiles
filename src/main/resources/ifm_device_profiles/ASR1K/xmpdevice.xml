@@ -1,28 +1,34 @@
 <?xml version="1.0"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
+
   <parent>
     <groupId>com.cisco.ifm</groupId>
     <artifactId>ifm_device_profiles</artifactId>
     <version>3.860.7-SNAPSHOT</version>
   </parent>
+
   <groupId>com.cisco.ifm.deviceProfile</groupId>
   <artifactId>asr1k</artifactId>
   <version>3.860.7-SNAPSHOT</version>
   <packaging>dar</packaging>
   <name>Device Package for ASR with IOS running (Non XR)</name>
   <description>Device Package for ASR with IOS running (Non XR)</description>
+
   <scm>
     <connection></connection>
     <developerConnection></developerConnection>
     <tag>device_packages-3.851.7-SNAPSHOT</tag>
     <url></url>
   </scm>
+
   <ciManagement>
     <system>Hudson</system>
     <url>https://sjc-nmtgci-01.cisco.com:9081/job/</url>
   </ciManagement>
+
   <distributionManagement />
+
   <properties>
     <release.tag.base>https://wwwin-svn.cisco.com/svn/ifm/tags</release.tag.base>
     <release.commit.comment>${env.SVN_COMMIT_COMMENT}</release.commit.comment>
@@ -31,6 +37,7 @@
     <sdkVersion>0.9.1.201603291549</sdkVersion>
     <release.settings.file>${env.M2_HOME}/conf/ifm-release-only-settings.xml</release.settings.file>
   </properties>
+
   <dependencies>
     <dependency>
       <groupId>com.cisco.ifm.deviceProfile</groupId>

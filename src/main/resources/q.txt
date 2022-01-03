@@ -1,4 +1,0 @@
-write c++ code that takes an input from the user an nubmer,
-the program needs to check whether this number is prime or not.
-if prime print its prime number .
-if not print not prime

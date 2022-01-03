@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
+
   <parent>
     <groupId>com.cisco.ifm</groupId>
     <artifactId>ifm_device_profiles</artifactId>
     <version>3.860.7-SNAPSHOT</version>
   </parent>
+
   <groupId>com.cisco.ifm.deviceProfile</groupId>
   <artifactId>ios</artifactId>
   <version>3.860.7-SNAPSHOT</version>
   <packaging>dar</packaging>
   <description>This is the generic profile for IOS devices</description>
+
   <properties>
     <formatVersion>2</formatVersion>
     <sdkVersion>0.9.1.201603291549</sdkVersion>

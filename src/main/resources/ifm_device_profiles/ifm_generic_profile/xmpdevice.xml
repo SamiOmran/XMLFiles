@@ -1,16 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?><!--Copyright (c) 2010 by Cisco Systems, 
-	Inc. All rights reserved. -->
+<?xml version="1.0" encoding="UTF-8"?><!--Copyright (c) 2010 by Cisco Systems, 	Inc. All rights reserved. -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+
 	<parent>
     <groupId>com.cisco.ifm</groupId>
     <artifactId>ifm_device_profiles</artifactId>
     <version>3.860.7-SNAPSHOT</version>
 	</parent>
+
 	<groupId>com.cisco.ifm.deviceProfile</groupId>
 	<artifactId>generic_profile</artifactId>
 	<version>3.860.7-SNAPSHOT</version>
 	<packaging>dar</packaging>
+
 	<scm>
 		<connection>scm:svn:https://wwwin-svn.cisco.com/svn/ifm/trunk/device_packages/ifm_device_profiles/ifm_generic_profile/tags/device_packages-2.11.23</connection>
 		<developerConnection>scm:svn:https://wwwin-svn.cisco.com/svn/ifm/trunk/device_packages/ifm_device_profiles/ifm_generic_profile/tags/device_packages-2.11.23</developerConnection>
